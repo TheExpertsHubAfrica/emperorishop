@@ -13,10 +13,10 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <header class="top-nav">
+    <header class="top-nav top-nav-apple">
       <div class="nav-wrap">
         <a href="#" class="brand">Emperorishop</a>
-        <nav class="menu" aria-label="Main Navigation">
+        <nav class="menu" id="site-menu" aria-label="Main Navigation">
           <a href="./store/">Store</a>
           <a href="./mac/">Mac</a>
           <a href="#">iPad</a>
@@ -30,141 +30,243 @@
           <a href="#">Support</a>
         </nav>
         <div class="nav-icons">
-          <button aria-label="Search">⌕</button>
-          <button aria-label="Bag">◯</button>
+          <button class="nav-icon-btn" type="button" aria-label="Search">
+            <svg class="nav-icon-svg" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.75" />
+              <path d="M16.5 16.5L21 21" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" />
+            </svg>
+          </button>
+          <button class="nav-icon-btn" type="button" aria-label="Shopping bag">
+            <svg class="nav-icon-svg" width="17" height="19" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M6.5 8.5h14L19 21H7L6.5 8.5zM9.5 8.5V6.5a3.5 3.5 0 117 0v2"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <button
+            class="nav-menu-toggle"
+            type="button"
+            aria-label="Menu"
+            aria-expanded="false"
+            aria-controls="site-menu"
+          >
+            <span class="nav-menu-bars" aria-hidden="true"></span>
+          </button>
         </div>
       </div>
     </header>
 
     <main>
-      <section class="hero">
-        <div class="hero-copy">
-          <h1>iPhone</h1>
-          <p>Meet the latest iPhone lineup.</p>
-          <div class="hero-cta">
-            <a href="#" class="btn btn-primary">Learn more</a>
-            <a href="#" class="btn btn-outline">Shop iPhone</a>
+      <section class="hero hero-iphone">
+        <div class="hero-iphone-stage">
+          <div class="hero-image hero-image-iphone">
+            <img
+              class="hero-photo hero-photo-iphone"
+              src="./images/iPhone%20lineup%20image.jpg"
+              alt="Latest iPhone lineup"
+              width="980"
+              height="560"
+              decoding="async"
+            />
           </div>
-        </div>
-        <div class="hero-image image-placeholder" role="img" aria-label="Latest iPhone lineup">
-          <span>iPhone lineup image placeholder</span>
+          <div class="hero-iphone-copy">
+            <div class="hero-copy">
+              <h1>iPhone</h1>
+              <p class="hero-subhead">Meet the latest iPhone lineup.</p>
+              <div class="hero-cta">
+                <a href="#" class="btn btn-primary btn-apple">Learn more</a>
+                <a href="#" class="btn btn-outline btn-apple btn-outline-hero">Shop iPhone</a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="hero hero-neo">
-        <div class="hero-copy">
-          <h2>MacBook Neo</h2>
-          <p>Amazing Mac. Surprising price.</p>
-          <div class="hero-cta">
-            <a href="#" class="btn btn-primary">Learn more</a>
-            <a href="#" class="btn btn-outline">Buy</a>
+        <div class="hero-neo-stage">
+          <div class="hero-neo-image">
+            <img
+              class="neo-hero-photo"
+              src="./images/MacBook%20image%20with%20hands.jpg"
+              alt="MacBook Neo"
+              width="780"
+              height="480"
+              decoding="async"
+            />
           </div>
-        </div>
-        <div class="neo-image-wrap" aria-label="MacBook Neo visual composition">
-          <div class="neo-laptop image-placeholder">
-            <span>MacBook image placeholder</span>
-          </div>
-          <div class="neo-hand image-placeholder">
-            <span>Hand image placeholder</span>
+          <div class="hero-neo-copy">
+            <div class="hero-copy">
+              <h2>MacBook Neo</h2>
+              <p>Amazing Mac. Surprising price.</p>
+              <div class="hero-cta">
+                <a href="#" class="btn btn-primary">Learn more</a>
+                <a href="#" class="btn btn-outline">Buy</a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="hero hero-ipad-air">
-        <div class="hero-copy">
-          <h2>iPad <em>air</em></h2>
-          <p>Now supercharged by M4.</p>
-          <div class="hero-cta">
-            <a href="#" class="btn btn-primary">Learn more</a>
-            <a href="#" class="btn btn-outline">Buy</a>
+        <div class="hero-ipad-stage">
+          <div class="hero-ipad-image">
+            <img
+              class="ipad-hero-photo"
+              src="./images/Front%20iPad%20image.jpg"
+              alt="iPad Air"
+              width="900"
+              height="460"
+              decoding="async"
+            />
           </div>
-        </div>
-        <div class="ipad-image-wrap" aria-label="iPad Air visual composition">
-          <div class="ipad-backstack image-placeholder">
-            <span>Rear iPads stack placeholder</span>
-          </div>
-          <div class="ipad-front image-placeholder">
-            <span>Front iPad image placeholder</span>
+          <div class="hero-ipad-copy">
+            <div class="hero-copy">
+              <h2>iPad <em>air</em></h2>
+              <p>Now supercharged by M4.</p>
+              <div class="hero-cta">
+                <a href="#" class="btn btn-primary">Learn more</a>
+                <a href="#" class="btn btn-outline">Buy</a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="promo-grid" aria-label="Featured promotions">
+        <article class="promo-card promo-dark promo-stack" aria-label="WWDC26">
+          <div class="promo-card-stage">
+            <div class="promo-image">
+              <img
+                class="promo-photo"
+                src="./images/WWDC%20artwork.jpg"
+                alt="WWDC26 — Emperorishop Worldwide Developers Conference"
+                width="800"
+                height="250"
+                decoding="async"
+              />
+            </div>
+            <div class="promo-copy">
+              <p>Emperorishop Worldwide Developers Conference.</p>
+              <p>Join us online June 8–12.</p>
+              <a href="#" class="btn btn-primary btn-small">Learn more</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="promo-card promo-light">
+          <div class="promo-card-stage">
+            <div class="promo-image">
+              <img
+                class="promo-photo"
+                src="./images/Watch%20product%20.jpg"
+                alt="Apple Watch Series 11"
+                width="800"
+                height="250"
+                decoding="async"
+              />
+            </div>
+            <div class="promo-copy">
+              <h3>WATCH SERIES 11</h3>
+              <p>The ultimate way to watch your health.</p>
+              <div class="promo-cta">
+                <a href="#" class="btn btn-primary btn-small">Learn more</a>
+                <a href="#" class="btn btn-outline btn-small">Buy</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
         <article class="promo-card promo-dark">
-          <div class="promo-copy">
-            <h3>WWDC26</h3>
-            <p>Emperorishop Worldwide Developers Conference. Join us online June 8-12.</p>
-            <a href="#" class="btn btn-primary btn-small">Learn more</a>
-          </div>
-          <div class="promo-image image-placeholder">
-            <span>WWDC artwork placeholder</span>
+          <div class="promo-card-stage">
+            <div class="promo-image">
+              <img
+                class="promo-photo"
+                src="./images/MacBook%20Pro%20image.jpg"
+                alt="MacBook Pro"
+                width="800"
+                height="250"
+                decoding="async"
+              />
+            </div>
+            <div class="promo-copy">
+              <h3>MacBook Pro</h3>
+              <p>Now with M5, M5 Pro, and M5 Max.</p>
+              <div class="promo-cta">
+                <a href="#" class="btn btn-primary btn-small">Learn more</a>
+                <a href="#" class="btn btn-outline btn-small btn-outline-dark">Buy</a>
+              </div>
+            </div>
           </div>
         </article>
 
         <article class="promo-card promo-light">
-          <div class="promo-copy">
-            <h3>WATCH SERIES 11</h3>
-            <p>The ultimate way to watch your health.</p>
-            <div class="promo-cta">
-              <a href="#" class="btn btn-primary btn-small">Learn more</a>
-              <a href="#" class="btn btn-outline btn-small">Buy</a>
+          <div class="promo-card-stage">
+            <div class="promo-image">
+              <img
+                class="promo-photo"
+                src="./images/AirPods%20image.jpg"
+                alt="AirPods Pro 3"
+                width="800"
+                height="250"
+                decoding="async"
+              />
             </div>
-          </div>
-          <div class="promo-image image-placeholder">
-            <span>Watch product placeholder</span>
-          </div>
-        </article>
-
-        <article class="promo-card promo-dark">
-          <div class="promo-copy">
-            <h3>MacBook Pro</h3>
-            <p>Now with M5, M5 Pro, and M5 Max.</p>
-            <div class="promo-cta">
-              <a href="#" class="btn btn-primary btn-small">Learn more</a>
-              <a href="#" class="btn btn-outline btn-small btn-outline-dark">Buy</a>
+            <div class="promo-copy">
+              <h3>AirPods Pro 3</h3>
+              <p>The world's best in-ear Active Noise Cancellation.</p>
+              <div class="promo-cta">
+                <a href="#" class="btn btn-primary btn-small">Learn more</a>
+                <a href="#" class="btn btn-outline btn-small">Buy</a>
+              </div>
             </div>
-          </div>
-          <div class="promo-image image-placeholder">
-            <span>MacBook Pro image placeholder</span>
           </div>
         </article>
 
         <article class="promo-card promo-light">
-          <div class="promo-copy">
-            <h3>AirPods Pro 3</h3>
-            <p>The world's best in-ear Active Noise Cancellation.</p>
-            <div class="promo-cta">
-              <a href="#" class="btn btn-primary btn-small">Learn more</a>
-              <a href="#" class="btn btn-outline btn-small">Buy</a>
+          <div class="promo-card-stage">
+            <div class="promo-image">
+              <img
+                class="promo-photo"
+                src="./images/Trade%20In%20image.jpg"
+                alt="Apple Trade In"
+                width="800"
+                height="250"
+                decoding="async"
+              />
             </div>
-          </div>
-          <div class="promo-image image-placeholder">
-            <span>AirPods image placeholder</span>
+            <div class="promo-copy">
+              <h3>Trade In</h3>
+              <p>Get up to $195-$685 in credit when you trade in iPhone 13 or higher.</p>
+              <a href="#" class="btn btn-primary btn-small">Get your estimate</a>
+            </div>
           </div>
         </article>
 
         <article class="promo-card promo-light">
-          <div class="promo-copy">
-            <h3>Trade In</h3>
-            <p>Get up to $195-$685 in credit when you trade in iPhone 13 or higher.</p>
-            <a href="#" class="btn btn-primary btn-small">Get your estimate</a>
-          </div>
-          <div class="promo-image image-placeholder">
-            <span>Trade In image placeholder</span>
-          </div>
-        </article>
-
-        <article class="promo-card promo-light">
-          <div class="promo-copy">
-            <h3>Card</h3>
-            <p>Get up to 3% Daily Cash back with every purchase.</p>
-            <div class="promo-cta">
-              <a href="#" class="btn btn-primary btn-small">Learn more</a>
-              <a href="#" class="btn btn-outline btn-small">Apply now</a>
+          <div class="promo-card-stage">
+            <div class="promo-image">
+              <img
+                class="promo-photo"
+                src="./images/Card%20image.jpg"
+                alt="Apple Card"
+                width="800"
+                height="250"
+                decoding="async"
+              />
             </div>
-          </div>
-          <div class="promo-image image-placeholder">
-            <span>Card image placeholder</span>
+            <div class="promo-copy">
+              <h3>Card</h3>
+              <p>Get up to 3% Daily Cash back with every purchase.</p>
+              <div class="promo-cta">
+                <a href="#" class="btn btn-primary btn-small">Learn more</a>
+                <a href="#" class="btn btn-outline btn-small">Apply now</a>
+              </div>
+            </div>
           </div>
         </article>
       </section>
