@@ -1087,6 +1087,14 @@ main {
 
   .top-nav.is-open {
     z-index: 10000;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: #fff;
+  }
+
+  .top-nav.is-open .nav-wrap {
+    position: relative;
+    z-index: 10002;
   }
 
   .top-nav.is-open .menu {

@@ -6,6 +6,9 @@
     ".mac-product-rail",
     ".mac-lineup-rail",
     ".mac-why-rail",
+    ".iphone-picker-rail",
+    ".iphone-lineup-rail",
+    ".iphone-why-rail",
   ];
 
   function enhanceRail(rail) {
