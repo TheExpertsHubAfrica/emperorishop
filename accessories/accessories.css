@@ -1,4 +1,12 @@
-/* Accessories page — extends ../mac/mac.css */
+/* Accessories page — extends ../mac/mac.css (Apple Store–style layout) */
+
+:root {
+  --accessories-content-max: 1200px;
+}
+
+body.page-accessories {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 
 .visually-hidden {
   position: absolute;
@@ -18,9 +26,9 @@
 }
 
 .accessories-subnav-inner {
-  max-width: 1200px;
+  max-width: var(--accessories-content-max);
   margin: 0 auto;
-  padding: 12px 18px;
+  padding: 12px max(18px, env(safe-area-inset-right)) 12px max(18px, env(safe-area-inset-left));
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -28,25 +36,27 @@
 }
 
 .accessories-subnav-title {
-  font-size: 21px;
+  font-size: 24px;
   font-weight: 600;
-  letter-spacing: -0.02em;
-  color: var(--text);
+  letter-spacing: -0.022em;
+  line-height: 1.1;
+  color: #1d1d1f;
 }
 
 .accessories-browse-btn {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 6px 12px;
+  padding: 6px 4px 6px 12px;
   margin: 0;
   border: none;
   border-radius: 8px;
   background: transparent;
   font-family: inherit;
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 400;
-  color: var(--text);
+  letter-spacing: -0.022em;
+  color: #1d1d1f;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
@@ -77,17 +87,22 @@ main.mac-main.accessories-main {
 }
 
 .accessories-hero-inner {
-  max-width: 1200px;
+  max-width: var(--accessories-content-max);
   margin: 0 auto;
-  padding: 48px 22px 56px;
+  padding: 72px max(18px, env(safe-area-inset-right)) 88px max(18px, env(safe-area-inset-left));
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
-  gap: 32px 40px;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  column-gap: min(48px, 5vw);
+  row-gap: 36px;
   align-items: center;
 }
 
+.accessories-hero-copy {
+  padding-right: min(8px, 2vw);
+}
+
 .accessories-hero-copy h1 {
-  font-size: clamp(40px, 5.5vw, 56px);
+  font-size: clamp(40px, 5vw, 56px);
   line-height: 1.05;
   font-weight: 600;
   letter-spacing: -0.03em;
@@ -96,11 +111,12 @@ main.mac-main.accessories-main {
 }
 
 .accessories-hero-copy p {
-  font-size: clamp(17px, 2.2vw, 21px);
-  line-height: 1.4;
+  font-size: clamp(17px, 2vw, 21px);
+  line-height: 1.4211;
+  font-weight: 400;
   color: #6e6e73;
   margin-bottom: 20px;
-  max-width: 36ch;
+  max-width: 32ch;
 }
 
 .accessories-hero-ctas {
@@ -111,10 +127,11 @@ main.mac-main.accessories-main {
 }
 
 .accessories-hero-ctas a {
-  color: var(--blue);
+  color: #0066cc;
   text-decoration: none;
   font-size: 17px;
-  line-height: 1.35;
+  line-height: 1.47059;
+  letter-spacing: -0.022em;
 }
 
 .accessories-hero-ctas a:hover {
@@ -123,51 +140,52 @@ main.mac-main.accessories-main {
 
 .accessories-hero-media {
   position: relative;
-  border-radius: 20px;
+  border-radius: 12px;
   overflow: hidden;
-  background: #e8e8ed;
-  aspect-ratio: 16 / 10;
-  max-height: min(420px, 52vw);
+  background: transparent;
   margin-left: auto;
   width: 100%;
+  max-width: 100%;
+  line-height: 0;
 }
 
 .accessories-hero-media img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+  max-width: 100%;
+  height: auto;
   display: block;
 }
 
 .accessories-find {
   background: #fff;
-  padding: 48px 22px 0;
+  padding: 56px max(18px, env(safe-area-inset-right)) 0 max(18px, env(safe-area-inset-left));
 }
 
 .accessories-find-inner {
-  max-width: 720px;
+  max-width: var(--accessories-content-max);
   margin: 0 auto;
   text-align: center;
 }
 
 .accessories-find-inner h2 {
-  font-size: clamp(28px, 4vw, 40px);
+  font-size: clamp(28px, 3.5vw, 40px);
   font-weight: 600;
   letter-spacing: -0.025em;
   line-height: 1.1;
-  margin-bottom: 24px;
+  margin: 0 auto 28px;
+  max-width: 22ch;
   color: #1d1d1f;
 }
 
 .accessories-search-wrap {
   position: relative;
-  margin-bottom: 28px;
+  max-width: 692px;
+  margin: 0 auto 32px;
 }
 
 .accessories-search-wrap svg {
   position: absolute;
-  left: 18px;
+  left: 20px;
   top: 50%;
   transform: translateY(-50%);
   color: #86868b;
@@ -176,14 +194,15 @@ main.mac-main.accessories-main {
 
 .accessories-search {
   width: 100%;
-  height: 52px;
-  padding: 0 20px 0 48px;
+  height: 56px;
+  padding: 0 22px 0 52px;
   border: 1px solid #d2d2d7;
-  border-radius: 999px;
+  border-radius: 980px;
   font-family: inherit;
   font-size: 17px;
+  letter-spacing: -0.022em;
   background: #fff;
-  color: var(--text);
+  color: #1d1d1f;
   outline: none;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
@@ -200,20 +219,23 @@ main.mac-main.accessories-main {
 .accessories-tabs {
   display: flex;
   justify-content: center;
-  gap: 0;
+  flex-wrap: wrap;
+  gap: 0 40px;
   border-bottom: 1px solid #d2d2d7;
-  margin-top: 8px;
+  margin: 0;
+  padding: 0;
 }
 
 .accessories-tab {
   position: relative;
-  padding: 12px 20px 14px;
+  padding: 16px 0 12px;
   margin: 0;
   border: none;
   background: none;
   font-family: inherit;
   font-size: 17px;
   font-weight: 400;
+  letter-spacing: -0.022em;
   color: #6e6e73;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
@@ -231,18 +253,19 @@ main.mac-main.accessories-main {
 .accessories-tab.is-active::after {
   content: "";
   position: absolute;
-  left: 12px;
-  right: 12px;
+  left: 0;
+  right: 0;
   bottom: -1px;
-  height: 2px;
+  height: 3px;
   background: #1d1d1f;
   border-radius: 1px;
 }
 
 .accessories-tab-panels {
-  padding: 32px 22px 64px;
-  max-width: 1200px;
+  padding: 40px max(18px, env(safe-area-inset-right)) 72px max(18px, env(safe-area-inset-left));
+  max-width: var(--accessories-content-max);
   margin: 0 auto;
+  background: #fff;
 }
 
 .accessories-tab-panel {
@@ -640,18 +663,21 @@ main.mac-main.accessories-main {
 @media (max-width: 900px) {
   .accessories-hero-inner {
     grid-template-columns: 1fr;
-    padding-top: 36px;
-    padding-bottom: 44px;
+    padding: 48px max(18px, env(safe-area-inset-right)) 56px max(18px, env(safe-area-inset-left));
+    row-gap: 28px;
+    column-gap: 0;
   }
 
-  .accessories-hero-media {
-    max-height: none;
-    aspect-ratio: 16 / 11;
-    order: -1;
+  .accessories-hero-copy {
+    padding-right: 0;
   }
 
   .accessories-hero-copy p {
     max-width: none;
+  }
+
+  .accessories-hero-media {
+    order: -1;
   }
 }
 
