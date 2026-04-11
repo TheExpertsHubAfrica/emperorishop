@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessories - Emperorishop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../mac/mac.css" />
+    <link rel="stylesheet" href="./accessories.css" />
+    <link rel="stylesheet" href="../scroll-arrows.css" />
+  </head>
+  <body>
+    <header class="mac-top-nav">
+      <div class="mac-nav-wrap">
+        <a href="../index.html" class="mac-brand" aria-label="Emperorishop home">
+          <img
+            class="brand-logo"
+            src="../images/emperorishop_logo.png"
+            alt=""
+            width="140"
+            height="32"
+            decoding="async"
+          />
+        </a>
+        <nav class="mac-menu" id="site-menu" aria-label="Main Navigation">
+          <a href="../store/">Store</a>
+          <a href="../mac/">Mac</a>
+          <a href="../ipad/">iPad</a>
+          <a href="../iphone/">iPhone</a>
+          <a href="#">Watch</a>
+          <a href="#">Vision</a>
+          <a href="#">AirPods</a>
+          <a href="#">TV &amp; Home</a>
+          <a href="#">Entertainment</a>
+          <a href="./index.html" class="is-active" aria-current="page">Accessories</a>
+          <a href="../support/">Support</a>
+        </nav>
+        <div class="mac-nav-icons">
+          <button class="nav-icon-btn" type="button" aria-label="Search">
+            <svg class="nav-icon-svg" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.75" />
+              <path d="M16.5 16.5L21 21" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" />
+            </svg>
+          </button>
+          <button class="nav-icon-btn" type="button" aria-label="Shopping bag">
+            <svg class="nav-icon-svg" width="17" height="19" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M6.5 8.5h14L19 21H7L6.5 8.5zM9.5 8.5V6.5a3.5 3.5 0 117 0v2"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <button
+            class="nav-menu-toggle"
+            type="button"
+            aria-label="Menu"
+            aria-expanded="false"
+            aria-controls="site-menu"
+          >
+            <span class="nav-menu-bars" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="accessories-subnav" role="region" aria-label="Accessories section">
+      <div class="accessories-subnav-inner">
+        <span class="accessories-subnav-title">Accessories</span>
+        <button type="button" class="accessories-browse-btn" aria-expanded="false" aria-haspopup="listbox">
+          Browse all
+          <span class="chevron" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+
+    <main class="mac-main accessories-main">
+      <section class="accessories-hero" aria-labelledby="accessories-hero-heading">
+        <div class="accessories-hero-inner">
+          <div class="accessories-hero-copy">
+            <h1 id="accessories-hero-heading">Meet your match.</h1>
+            <p>The accessories you love. In a new mix of colors and textures.</p>
+            <div class="accessories-hero-ctas">
+              <a href="../iphone/">Shop all iPhone accessories &gt;</a>
+              <a href="#">Shop all Apple Watch bands &gt;</a>
+            </div>
+          </div>
+          <div class="accessories-hero-media">
+            <img
+              src="../images/accessories-hero.png"
+              alt=""
+              width="980"
+              height="560"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="accessories-find" aria-labelledby="accessories-find-heading">
+        <div class="accessories-find-inner">
+          <h2 id="accessories-find-heading">Find the accessories you&rsquo;re looking for.</h2>
+          <div class="accessories-search-wrap">
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.75" />
+              <path d="M16.5 16.5L21 21" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" />
+            </svg>
+            <label for="accessories-search-input" class="visually-hidden">Search accessories</label>
+            <input
+              id="accessories-search-input"
+              class="accessories-search"
+              type="search"
+              name="q"
+              placeholder="Search accessories"
+              autocomplete="off"
+            />
+          </div>
+          <div
+            class="accessories-tabs"
+            role="tablist"
+            aria-label="Browse accessories"
+          >
+            <button
+              type="button"
+              class="accessories-tab is-active"
+              role="tab"
+              id="tab-product"
+              aria-selected="true"
+              aria-controls="panel-product"
+            >
+              Browse by Product
+            </button>
+            <button
+              type="button"
+              class="accessories-tab"
+              role="tab"
+              id="tab-category"
+              aria-selected="false"
+              aria-controls="panel-category"
+              tabindex="-1"
+            >
+              Browse by Category
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <div class="accessories-tab-panels">
+        <div
+          class="accessories-tab-panel accessories-tab-panel--product"
+          id="panel-product"
+          role="tabpanel"
+          aria-labelledby="tab-product"
+        >
+          <div class="accessories-product-browse">
+            <p class="accessories-product-intro">
+              Choose a device to see cases, power, audio, and more matched to what you use every day.
+            </p>
+            <div class="accessories-product-grid accessories-product-grid--r1" role="list">
+              <a href="../mac/" class="accessories-product-tile" role="listitem">
+                <span class="accessories-product-icon" aria-hidden="true">
+                  <svg viewBox="0 0 56 56" width="56" height="56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="10" y="14" width="36" height="24" rx="3" stroke="#1d1d1f" stroke-width="1.75" />
+                    <path d="M8 40h40" stroke="#1d1d1f" stroke-width="1.75" stroke-linecap="round" />
+                  </svg>
+                </span>
+                <span class="accessories-product-label">Mac</span>
+              </a>
+              <a href="../ipad/" class="accessories-product-tile" role="listitem">
+                <span class="accessories-product-icon" aria-hidden="true">
+                  <svg viewBox="0 0 56 56" width="56" height="56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="12" y="8" width="32" height="40" rx="3" stroke="#1d1d1f" stroke-width="1.75" />
+                  </svg>
+                </span>
+                <span class="accessories-product-label">iPad</span>
+              </a>
+              <a href="../iphone/" class="accessories-product-tile" role="listitem">
+                <span class="accessories-product-icon" aria-hidden="true">
+                  <svg viewBox="0 0 56 56" width="56" height="56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="18" y="6" width="20" height="44" rx="3" stroke="#1d1d1f" stroke-width="1.75" />
+                  </svg>
+                </span>
+                <span class="accessories-product-label">iPhone</span>
+              </a>
+              <a href="#" class="accessories-product-tile" role="listitem">
+                <span class="accessories-product-icon" aria-hidden="true">
+                  <svg viewBox="0 0 56 56" width="56" height="56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="16" y="12" width="24" height="30" rx="6" stroke="#1d1d1f" stroke-width="1.75" />
+                    <path d="M12 20h4M40 20h4" stroke="#1d1d1f" stroke-width="1.75" stroke-linecap="round" />
+                  </svg>
+                </span>
+                <span class="accessories-product-label">Watch</span>
+              </a>
+              <a href="#" class="accessories-product-tile" role="listitem">
+                <span class="accessories-product-icon" aria-hidden="true">
+                  <svg viewBox="0 0 56 56" width="56" height="56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M10 24c0-4 4-8 10-8h16c6 0 10 4 10 8v4c0 4-4 8-8 8H18c-4 0-8-4-8-8v-4Z"
+                      stroke="#1d1d1f"
+                      stroke-width="1.75"
+                    />
+                    <path d="M28 14v-4M18 26h20" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round" />
+                  </svg>
+                </span>
+                <span class="accessories-product-label">Apple Vision Pro</span>
+              </a>
+            </div>
+            <div
+              class="accessories-product-grid accessories-product-grid--r2"
+              id="accessories-product-row2"
+              role="list"
+              aria-label="More products"
+            >
+              <a href="#" class="accessories-product-tile" role="listitem">
+                <span class="accessories-product-icon" aria-hidden="true">
+                  <svg viewBox="0 0 56 56" width="56" height="56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M22 10c-2 0-3 2-3 4v28c0 2 1 4 3 4h2l2-6M34 10c2 0 3 2 3 4v28c0 2-1 4-3 4h-2l-2-6"
+                      stroke="#1d1d1f"
+                      stroke-width="1.75"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </span>
+                <span class="accessories-product-label">AirPods</span>
+              </a>
+              <a href="#" class="accessories-product-tile" role="listitem">
+                <span class="accessories-product-icon" aria-hidden="true">
+                  <svg viewBox="0 0 56 56" width="56" height="56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="8" y="18" width="40" height="22" rx="4" stroke="#1d1d1f" stroke-width="1.75" />
+                    <path d="M22 40v6M34 40v6" stroke="#1d1d1f" stroke-width="1.75" stroke-linecap="round" />
+                  </svg>
+                </span>
+                <span class="accessories-product-label">TV &amp; Home</span>
+              </a>
+              <a href="#" class="accessories-product-tile" role="listitem">
+                <span class="accessories-product-icon" aria-hidden="true">
+                  <svg viewBox="0 0 56 56" width="56" height="56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="28" cy="28" r="16" stroke="#1d1d1f" stroke-width="1.75" />
+                    <path
+                      d="M22 22c0-2 2-3 4-3h6c2.5 0 4 2 4 4v8c0 2-1.5 4-4 4h-4v6"
+                      stroke="#1d1d1f"
+                      stroke-width="1.75"
+                      stroke-linecap="round"
+                      fill="none"
+                    />
+                  </svg>
+                </span>
+                <span class="accessories-product-label">Beats</span>
+              </a>
+            </div>
+            <div class="accessories-show-strip">
+              <button
+                type="button"
+                class="accessories-show-toggle"
+                id="accessories-show-toggle"
+                aria-expanded="true"
+                aria-controls="accessories-product-row2"
+              >
+                <span class="accessories-show-label">Show less</span>
+                <svg
+                  class="accessories-show-chevron"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2 7l4-4 4 4"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="accessories-tab-panel accessories-tab-panel--category"
+          id="panel-category"
+          role="tabpanel"
+          aria-labelledby="tab-category"
+          hidden
+        >
+          <div class="accessories-category-browse">
+            <p class="accessories-category-intro">
+              Browse chargers, bands, bags, and more—organized the way you shop.
+            </p>
+            <div class="accessories-category-grid accessories-category-grid--r1" role="list">
+              <a href="#" class="accessories-product-tile" role="listitem">
+                <span class="accessories-product-icon" aria-hidden="true">
+                  <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M18 16l1.2 3.5 3.5 1.2-3.5 1.2L18 25.6l-1.2-3.7-3.5-1.2 3.5-1.2L18 16zM38 10l1 2.8 2.8 1-2.8 1L38 17.6l-1-2.8-2.8-1 2.8-1L38 10zM30 32l1 2.8 2.8 1-2.8 1L30 39.6l-1-2.8-2.8-1 2.8-1L30 32z"
+                      fill="#1d1d1f"
+                    />
+                  </svg>
+                </span>
+                <span class="accessories-product-label">New Arrivals</span>
+              </a>
+              <a href="#" class="accessories-product-tile" role="listitem">
+                <span class="accessories-product-icon" aria-hidden="true">
+                  <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="14" y="10" width="22" height="36" rx="4" stroke="#1d1d1f" stroke-width="1.75" />
+                    <rect x="18" y="14" width="14" height="22" rx="2" stroke="#1d1d1f" stroke-width="1.5" opacity="0.5" />
+                  </svg>
+                </span>
+                <span class="accessories-product-label">Cases &amp; Protection</span>
+              </a>
+              <a href="#" class="accessories-product-tile" role="listitem">
+                <span class="accessories-product-icon" aria-hidden="true">
+                  <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M18 12h12v8H18zM22 20v6M26 20v6"
+                      stroke="#1d1d1f"
+                      stroke-width="1.75"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M30 26c4 4 6 10 6 16"
+                      stroke="#1d1d1f"
+                      stroke-width="1.75"
+                      stroke-linecap="round"
+                    />
+                    <path d="M36 42h6l4 4" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round" />
+                  </svg>
+                </span>
+                <span class="accessories-product-label">Charging Essentials</span>
+              </a>
+              <a href="#" class="accessories-product-tile" role="listitem">
+                <span class="accessories-product-icon" aria-hidden="true">
+                  <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="28" cy="28" r="14" stroke="#1d1d1f" stroke-width="1.75" />
+                    <path d="M28 18v20" stroke="#1d1d1f" stroke-width="1.75" stroke-linecap="round" />
+                  </svg>
+                </span>
+                <span class="accessories-product-label">MagSafe</span>
+              </a>
+              <a href="#" class="accessories-product-tile" role="listitem">
+                <span class="accessories-product-icon" aria-hidden="true">
+                  <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12 30c0-8 7-14 16-14s16 6 16 14v6H12v-6z"
+                      stroke="#1d1d1f"
+                      stroke-width="1.75"
+                      stroke-linejoin="round"
+                    />
+                    <path d="M16 22c4-6 10-8 12-8s8 2 12 8" stroke="#1d1d1f" stroke-width="1.75" stroke-linecap="round" />
+                  </svg>
+                </span>
+                <span class="accessories-product-label">Headphones &amp; Speakers</span>
+              </a>
+            </div>
+            <div
+              class="accessories-category-grid accessories-category-grid--extra"
+              id="accessories-category-extra"
+              role="list"
+              aria-label="More categories"
+            >
+              <a href="#" class="accessories-product-tile" role="listitem">
+                <span class="accessories-product-icon" aria-hidden="true">
+                  <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="18" y="14" width="20" height="28" rx="4" stroke="#1d1d1f" stroke-width="1.75" />
+                    <path d="M14 22h4M14 34h4M38 22h4M38 34h4" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round" />
+                  </svg>
+                </span>
+                <span class="accessories-product-label">Apple Watch Bands</span>
+              </a>
+              <a href="#" class="accessories-product-tile" role="listitem">
+                <span class="accessories-product-icon" aria-hidden="true">
+                  <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M10 24c0-4 4-8 10-8h16c6 0 10 4 10 8v4c0 4-4 8-8 8H18c-4 0-8-4-8-8v-4Z"
+                      stroke="#1d1d1f"
+                      stroke-width="1.75"
+                    />
+                    <path d="M28 14v-4M18 26h20" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round" />
+                  </svg>
+                </span>
+                <span class="accessories-product-label">Apple Vision Pro</span>
+              </a>
+              <a href="#" class="accessories-product-tile" role="listitem">
+                <span class="accessories-product-icon" aria-hidden="true">
+                  <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M18 14c6-4 14-4 20 0"
+                      stroke="#1d1d1f"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M22 18c4-2.5 8-2.5 12 0M26 22h4"
+                      stroke="#1d1d1f"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M16 34h24l-2-16H18l-2 16z"
+                      stroke="#1d1d1f"
+                      stroke-width="1.75"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M22 26h2M28 26h2M32 26h2"
+                      stroke="#1d1d1f"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </span>
+                <span class="accessories-product-label">Home Office</span>
+              </a>
+              <a href="#" class="accessories-product-tile" role="listitem">
+                <span class="accessories-product-icon" aria-hidden="true">
+                  <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="10" y="18" width="36" height="22" rx="2" stroke="#1d1d1f" stroke-width="1.75" />
+                    <path
+                      d="M14 22h4M22 22h4M30 22h4M38 22h4M14 26h4M22 26h4M30 26h4M14 30h4M22 30h4"
+                      stroke="#1d1d1f"
+                      stroke-width="1.25"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </span>
+                <span class="accessories-product-label">Mice &amp; Keyboards</span>
+              </a>
+              <a href="#" class="accessories-product-tile" role="listitem">
+                <span class="accessories-product-icon" aria-hidden="true">
+                  <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="28" cy="28" r="12" stroke="#1d1d1f" stroke-width="1.75" />
+                    <path
+                      d="M24 28c0-2 2-3 4-3s4 1 4 3-2 3-4 3-4-1-4-3z"
+                      fill="#1d1d1f"
+                    />
+                  </svg>
+                </span>
+                <span class="accessories-product-label">AirTag and Accessories</span>
+              </a>
+
+              <a href="#" class="accessories-product-tile" role="listitem">
+                <span class="accessories-product-icon" aria-hidden="true">
+                  <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="22" cy="14" r="4" stroke="#1d1d1f" stroke-width="1.75" />
+                    <path
+                      d="M18 22l-4 18h8l2-8 2 8h8l-4-18"
+                      stroke="#1d1d1f"
+                      stroke-width="1.75"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path d="M20 32h12" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round" />
+                  </svg>
+                </span>
+                <span class="accessories-product-label">Health &amp; Fitness</span>
+              </a>
+              <a href="#" class="accessories-product-tile" role="listitem">
+                <span class="accessories-product-icon" aria-hidden="true">
+                  <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="28" cy="28" r="14" stroke="#1d1d1f" stroke-width="1.75" />
+                    <circle cx="28" cy="26" r="3" fill="#1d1d1f" />
+                    <path
+                      d="M22 34h12M28 22v6"
+                      stroke="#1d1d1f"
+                      stroke-width="1.75"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </span>
+                <span class="accessories-product-label">Accessibility</span>
+              </a>
+              <a href="#" class="accessories-product-tile" role="listitem">
+                <span class="accessories-product-icon" aria-hidden="true">
+                  <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="14" y="20" width="28" height="18" rx="4" stroke="#1d1d1f" stroke-width="1.75" />
+                    <path d="M18 26h6M24 26h2M32 26h4M18 30h8M26 30h6" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round" />
+                    <path d="M22 14v4M34 14v4" stroke="#1d1d1f" stroke-width="1.75" stroke-linecap="round" />
+                  </svg>
+                </span>
+                <span class="accessories-product-label">Gaming</span>
+              </a>
+              <a href="#" class="accessories-product-tile" role="listitem">
+                <span class="accessories-product-icon" aria-hidden="true">
+                  <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="16" y="18" width="24" height="18" rx="3" stroke="#1d1d1f" stroke-width="1.75" />
+                    <circle cx="22" cy="26" r="2.5" fill="#1d1d1f" />
+                    <path d="M30 24h6M33 21v6" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round" />
+                    <path d="M28 14h4l2-4" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round" />
+                  </svg>
+                </span>
+                <span class="accessories-product-label">Photography</span>
+              </a>
+              <a href="#" class="accessories-product-tile" role="listitem">
+                <span class="accessories-product-icon" aria-hidden="true">
+                  <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12 36c8-12 12-20 20-24 4 8 8 14 16 18-4 4-8 6-14 6-8 0-16-4-22 0z"
+                      stroke="#1d1d1f"
+                      stroke-width="1.75"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                <span class="accessories-product-label">Creative Tools</span>
+              </a>
+            </div>
+            <div class="accessories-show-strip">
+              <button
+                type="button"
+                class="accessories-show-toggle"
+                id="accessories-category-show-toggle"
+                aria-expanded="true"
+                aria-controls="accessories-category-extra"
+              >
+                <span class="accessories-show-label">Show less</span>
+                <svg
+                  class="accessories-show-chevron"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2 7l4-4 4 4"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="accessories-featured-iphone" aria-labelledby="featured-iphone-heading">
+        <div class="accessories-featured-inner">
+          <h2 id="featured-iphone-heading" class="accessories-featured-title">Featured Accessories</h2>
+          <div
+            class="accessories-featured-carousel scroll-arrows-wrap"
+            id="featuredIphoneCarousel"
+            role="region"
+            aria-roledescription="carousel"
+            aria-label="Featured accessories"
+          >
+            <div class="accessories-featured-viewport">
+              <div class="accessories-featured-track" id="featuredIphoneTrack">
+                <article class="accessories-featured-slide" aria-hidden="false" data-featured-slide="0">
+                  <div class="accessories-featured-slide-media">
+                    <img
+                      src="../images/featured-iphone-accessory-1.png"
+                      alt="iPhone 17 Pro Silicone Case with MagSafe in Bright Guava"
+                      width="420"
+                      height="420"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="accessories-featured-swatches" aria-hidden="true">
+                    <span class="accessories-featured-swatch" style="--swatch: #e8a4a8"></span>
+                    <span class="accessories-featured-swatch" style="--swatch: #f5e6c8"></span>
+                    <span class="accessories-featured-swatch" style="--swatch: #f5f5f5"></span>
+                    <span class="accessories-featured-swatch" style="--swatch: #2d3a4a"></span>
+                    <span class="accessories-featured-swatch" style="--swatch: #6b5344"></span>
+                    <span class="accessories-featured-swatch" style="--swatch: #8e8e93"></span>
+                    <span class="accessories-featured-swatch accessories-featured-swatch--more">+</span>
+                  </div>
+                  <p class="accessories-featured-badge">New</p>
+                  <h3 class="accessories-featured-name">
+                    iPhone 17 Pro Silicone Case with MagSafe – Bright Guava
+                  </h3>
+                  <p class="accessories-featured-price">$49.00</p>
+                </article>
+                <article class="accessories-featured-slide" aria-hidden="true" data-featured-slide="1">
+                  <div class="accessories-featured-slide-media">
+                    <img
+                      src="../images/iPhone%20lineup%20image.jpg"
+                      alt="iPhone accessories"
+                      width="420"
+                      height="420"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="accessories-featured-swatches" aria-hidden="true">
+                    <span class="accessories-featured-swatch" style="--swatch: #1d1d1f"></span>
+                    <span class="accessories-featured-swatch" style="--swatch: #e8e8ed"></span>
+                    <span class="accessories-featured-swatch" style="--swatch: #0071e3"></span>
+                    <span class="accessories-featured-swatch accessories-featured-swatch--more">+</span>
+                  </div>
+                  <p class="accessories-featured-badge">New</p>
+                  <h3 class="accessories-featured-name">Clear Case with MagSafe for iPhone 17</h3>
+                  <p class="accessories-featured-price">$39.00</p>
+                </article>
+                <article class="accessories-featured-slide" aria-hidden="true" data-featured-slide="2">
+                  <div class="accessories-featured-slide-media">
+                    <img
+                      src="../images/AirPods%20image.jpg"
+                      alt="AirPods Pro"
+                      width="420"
+                      height="420"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="accessories-featured-swatches" aria-hidden="true">
+                    <span class="accessories-featured-swatch" style="--swatch: #f5f5f7"></span>
+                    <span class="accessories-featured-swatch" style="--swatch: #1d1d1f"></span>
+                  </div>
+                  <p class="accessories-featured-badge">New</p>
+                  <h3 class="accessories-featured-name">AirPods Pro 3</h3>
+                  <p class="accessories-featured-price">$249.00</p>
+                </article>
+                <article class="accessories-featured-slide" aria-hidden="true" data-featured-slide="3">
+                  <div class="accessories-featured-slide-media">
+                    <img
+                      src="../images/Watch%20product%20.jpg"
+                      alt="Apple Watch band"
+                      width="420"
+                      height="420"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="accessories-featured-swatches" aria-hidden="true">
+                    <span class="accessories-featured-swatch" style="--swatch: #c4a574"></span>
+                    <span class="accessories-featured-swatch" style="--swatch: #3a3a3c"></span>
+                    <span class="accessories-featured-swatch" style="--swatch: #e85d75"></span>
+                    <span class="accessories-featured-swatch accessories-featured-swatch--more">+</span>
+                  </div>
+                  <h3 class="accessories-featured-name">Sport Band for Apple Watch</h3>
+                  <p class="accessories-featured-price">$49.00</p>
+                </article>
+                <article class="accessories-featured-slide" aria-hidden="true" data-featured-slide="4">
+                  <div class="accessories-featured-slide-media">
+                    <img
+                      src="../images/Card%20image.jpg"
+                      alt="Wallet accessory"
+                      width="420"
+                      height="420"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="accessories-featured-swatches" aria-hidden="true">
+                    <span class="accessories-featured-swatch" style="--swatch: #5c4033"></span>
+                    <span class="accessories-featured-swatch" style="--swatch: #1d1d1f"></span>
+                  </div>
+                  <h3 class="accessories-featured-name">FineWoven Wallet with MagSafe</h3>
+                  <p class="accessories-featured-price">$59.00</p>
+                </article>
+                <article class="accessories-featured-slide" aria-hidden="true" data-featured-slide="5">
+                  <div class="accessories-featured-slide-media">
+                    <img
+                      src="../images/Trade%20In%20image.jpg"
+                      alt="Charging accessory"
+                      width="420"
+                      height="420"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="accessories-featured-swatches" aria-hidden="true">
+                    <span class="accessories-featured-swatch" style="--swatch: #ffffff"></span>
+                  </div>
+                  <h3 class="accessories-featured-name">MagSafe Charger (2 m)</h3>
+                  <p class="accessories-featured-price">$39.00</p>
+                </article>
+                <article class="accessories-featured-slide" aria-hidden="true" data-featured-slide="6">
+                  <div class="accessories-featured-slide-media">
+                    <img
+                      src="../images/Front%20iPad%20image.jpg"
+                      alt="Smart accessory"
+                      width="420"
+                      height="420"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="accessories-featured-swatches" aria-hidden="true">
+                    <span class="accessories-featured-swatch" style="--swatch: #2d2d2f"></span>
+                    <span class="accessories-featured-swatch" style="--swatch: #e3dcd4"></span>
+                    <span class="accessories-featured-swatch accessories-featured-swatch--more">+</span>
+                  </div>
+                  <p class="accessories-featured-badge">New</p>
+                  <h3 class="accessories-featured-name">Smart Folio for iPhone 17 Pro</h3>
+                  <p class="accessories-featured-price">$79.00</p>
+                </article>
+                <article class="accessories-featured-slide" aria-hidden="true" data-featured-slide="7">
+                  <div class="accessories-featured-slide-media">
+                    <img
+                      src="../images/MacBook%20image%20with%20hands.jpg"
+                      alt="Desk accessory"
+                      width="420"
+                      height="420"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="accessories-featured-swatches" aria-hidden="true">
+                    <span class="accessories-featured-swatch" style="--swatch: #c7c7cc"></span>
+                    <span class="accessories-featured-swatch" style="--swatch: #1d1d1f"></span>
+                  </div>
+                  <h3 class="accessories-featured-name">20W USB-C Power Adapter</h3>
+                  <p class="accessories-featured-price">$19.00</p>
+                </article>
+              </div>
+            </div>
+            <button
+              type="button"
+              class="scroll-arrow-btn scroll-arrow-btn-next accessories-featured-next is-visible"
+              id="featuredIphoneNext"
+              aria-label="Next featured accessory"
+            >
+              <span aria-hidden="true">›</span>
+            </button>
+          </div>
+          <div class="accessories-featured-dots" role="tablist" aria-label="Featured slides">
+            <button
+              type="button"
+              class="accessories-featured-dot is-active"
+              role="tab"
+              aria-selected="true"
+              aria-label="Slide 1"
+              data-featured-dot="0"
+            ></button>
+            <button type="button" class="accessories-featured-dot" role="tab" aria-selected="false" aria-label="Slide 2" data-featured-dot="1"></button>
+            <button type="button" class="accessories-featured-dot" role="tab" aria-selected="false" aria-label="Slide 3" data-featured-dot="2"></button>
+            <button type="button" class="accessories-featured-dot" role="tab" aria-selected="false" aria-label="Slide 4" data-featured-dot="3"></button>
+            <button type="button" class="accessories-featured-dot" role="tab" aria-selected="false" aria-label="Slide 5" data-featured-dot="4"></button>
+            <button type="button" class="accessories-featured-dot" role="tab" aria-selected="false" aria-label="Slide 6" data-featured-dot="5"></button>
+            <button type="button" class="accessories-featured-dot" role="tab" aria-selected="false" aria-label="Slide 7" data-featured-dot="6"></button>
+            <button type="button" class="accessories-featured-dot" role="tab" aria-selected="false" aria-label="Slide 8" data-featured-dot="7"></button>
+          </div>
+          <p class="accessories-featured-shopall">
+            <a href="../iphone/">Shop all accessories &gt;</a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <section class="quick-links-band" aria-label="Quick Links">
+      <div class="quick-links-inner">
+        <div class="quick-links-row">
+          <div class="quick-links-left">
+            <h2 class="quick-links-title">Quick Links</h2>
+            <div class="quick-links-pills">
+              <a href="#">Find a Store</a>
+              <a href="#">Order Status</a>
+              <a href="#">Shopping Help</a>
+              <a href="#">Returns</a>
+              <a href="#">Your Saves</a>
+            </div>
+          </div>
+          <button type="button" class="quick-links-fab" aria-label="Chat with a specialist">
+            <span class="quick-links-avatar placeholder">Chat</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-wrap">
+        <div class="footer-links-grid">
+          <div class="footer-col">
+            <h4>Products</h4>
+            <a href="../store/">Store</a>
+            <a href="../mac/">Mac</a>
+            <a href="../ipad/">iPad</a>
+            <a href="../iphone/">iPhone</a>
+            <a href="#">Watch</a>
+            <a href="#">Vision</a>
+            <a href="#">AirPods</a>
+            <a href="#">TV &amp; Home</a>
+            <a href="./index.html" aria-current="page">Accessories</a>
+          </div>
+
+          <div class="footer-col">
+            <h4>Account &amp; orders</h4>
+            <a href="#">Your Emperorishop account</a>
+            <a href="#">Order status</a>
+            <a href="#">Shipping &amp; returns</a>
+            <a href="#">Help center</a>
+            <a href="#">Contact us</a>
+          </div>
+
+          <div class="footer-col">
+            <h4>Retail &amp; services</h4>
+            <a href="#">Find a location</a>
+            <a href="#">Device setup</a>
+            <a href="#">Trade-in</a>
+            <a href="#">Financing</a>
+            <a href="#">Refurbished devices</a>
+            <a href="#">Carrier offers</a>
+            <a href="#">Shopping help</a>
+          </div>
+
+          <div class="footer-col">
+            <h4>For organizations</h4>
+            <a href="#">Business</a>
+            <a href="#">Education</a>
+            <a href="#">Volume purchasing</a>
+          </div>
+
+          <div class="footer-col">
+            <h4>About Emperorishop</h4>
+            <a href="#">Our story</a>
+            <a href="#">News</a>
+            <a href="#">Careers</a>
+            <a href="#">Accessibility</a>
+            <a href="#">Sustainability</a>
+            <a href="#">Privacy</a>
+          </div>
+        </div>
+
+        <div class="footer-shop-note">
+          More ways to shop: <a href="#">Find an Emperorishop location</a> or an
+          <a href="#">authorized partner</a> near you. Or call
+          <a href="tel:+18005551234">1-800-555-1234</a>.
+        </div>
+
+        <div class="footer-legal">
+          <p>Copyright © 2026 Emperorishop. All rights reserved.</p>
+          <div class="footer-legal-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Sales and Refunds</a>
+            <a href="#">Legal</a>
+            <a href="#">Site Map</a>
+          </div>
+          <span>Ghana</span>
+        </div>
+      </div>
+    </footer>
+    <script src="../nav.js" defer></script>
+    <script src="../scroll-arrows.js" defer></script>
+    <script>
+      (function () {
+        var tabs = document.querySelectorAll(".accessories-tab");
+        var panels = document.querySelectorAll(".accessories-tab-panel");
+        if (!tabs.length || !panels.length) return;
+
+        function activate(index) {
+          tabs.forEach(function (t, i) {
+            var on = i === index;
+            t.classList.toggle("is-active", on);
+            t.setAttribute("aria-selected", on ? "true" : "false");
+            t.setAttribute("tabindex", on ? "0" : "-1");
+          });
+          panels.forEach(function (p, i) {
+            p.hidden = i !== index;
+          });
+        }
+
+        tabs.forEach(function (tab, i) {
+          tab.addEventListener("click", function () {
+            activate(i);
+          });
+          tab.addEventListener("keydown", function (e) {
+            var next = i;
+            if (e.key === "ArrowRight") next = (i + 1) % tabs.length;
+            else if (e.key === "ArrowLeft") next = (i - 1 + tabs.length) % tabs.length;
+            else return;
+            e.preventDefault();
+            tabs[next].focus();
+            activate(next);
+          });
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        var row = document.getElementById("accessories-product-row2");
+        var btn = document.getElementById("accessories-show-toggle");
+        if (!row || !btn) return;
+        var label = btn.querySelector(".accessories-show-label");
+
+        function setExpanded(expanded) {
+          row.hidden = !expanded;
+          btn.setAttribute("aria-expanded", expanded ? "true" : "false");
+          btn.classList.toggle("accessories-show-toggle--collapsed", !expanded);
+          if (label) label.textContent = expanded ? "Show less" : "Show more";
+        }
+
+        setExpanded(true);
+
+        btn.addEventListener("click", function () {
+          var expanded = btn.getAttribute("aria-expanded") === "true";
+          setExpanded(!expanded);
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        var row = document.getElementById("accessories-category-extra");
+        var btn = document.getElementById("accessories-category-show-toggle");
+        if (!row || !btn) return;
+        var label = btn.querySelector(".accessories-show-label");
+
+        function setExpanded(expanded) {
+          row.hidden = !expanded;
+          btn.setAttribute("aria-expanded", expanded ? "true" : "false");
+          btn.classList.toggle("accessories-show-toggle--collapsed", !expanded);
+          if (label) label.textContent = expanded ? "Show less" : "Show more";
+        }
+
+        setExpanded(true);
+
+        btn.addEventListener("click", function () {
+          var expanded = btn.getAttribute("aria-expanded") === "true";
+          setExpanded(!expanded);
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        var viewport = document.querySelector(".accessories-featured-viewport");
+        var track = document.getElementById("featuredIphoneTrack");
+        var nextBtn = document.getElementById("featuredIphoneNext");
+        var dots = document.querySelectorAll("[data-featured-dot]");
+        var slides = document.querySelectorAll(".accessories-featured-slide");
+        if (!viewport || !track || !nextBtn || !slides.length) return;
+
+        var n = slides.length;
+        var index = 0;
+
+        function slideWidth() {
+          return viewport.offsetWidth;
+        }
+
+        function sizeSlides() {
+          var w = slideWidth();
+          slides.forEach(function (s) {
+            s.style.flex = "0 0 " + w + "px";
+            s.style.width = w + "px";
+            s.style.maxWidth = w + "px";
+          });
+        }
+
+        function go(i) {
+          index = ((i % n) + n) % n;
+          var w = slideWidth();
+          track.style.transform = "translateX(-" + index * w + "px)";
+          slides.forEach(function (s, j) {
+            s.setAttribute("aria-hidden", j !== index ? "true" : "false");
+          });
+          if (dots.length) {
+            dots.forEach(function (d, j) {
+              var on = j === index;
+              d.classList.toggle("is-active", on);
+              d.setAttribute("aria-selected", on ? "true" : "false");
+              d.setAttribute("tabindex", on ? "0" : "-1");
+            });
+          }
+        }
+
+        nextBtn.addEventListener("click", function () {
+          go(index + 1);
+        });
+
+        dots.forEach(function (d) {
+          d.addEventListener("click", function () {
+            go(parseInt(d.getAttribute("data-featured-dot"), 10));
+          });
+        });
+
+        window.addEventListener(
+          "resize",
+          function () {
+            sizeSlides();
+            go(index);
+          },
+          { passive: true }
+        );
+
+        sizeSlides();
+        go(0);
+      })();
+    </script>
+  </body>
+</html>

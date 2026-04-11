@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Support - Emperorishop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../store/store.css" />
+    <link rel="stylesheet" href="./support.css" />
+    <link rel="stylesheet" href="../scroll-arrows.css" />
+  </head>
+  <body>
+    <header class="top-nav">
+      <div class="nav-wrap">
+        <a href="../index.html" class="brand" aria-label="Emperorishop home">
+          <img
+            class="brand-logo"
+            src="../images/emperorishop_logo.png"
+            alt=""
+            width="140"
+            height="32"
+            decoding="async"
+          />
+        </a>
+        <nav class="menu" id="site-menu" aria-label="Main Navigation">
+          <a href="../store/">Store</a>
+          <a href="../mac/">Mac</a>
+          <a href="../ipad/">iPad</a>
+          <a href="../iphone/">iPhone</a>
+          <a href="#">Watch</a>
+          <a href="#">Vision</a>
+          <a href="#">AirPods</a>
+          <a href="#">TV &amp; Home</a>
+          <a href="#">Entertainment</a>
+          <a href="../accessories/">Accessories</a>
+          <a href="./index.html" class="is-active" aria-current="page">Support</a>
+        </nav>
+        <div class="nav-icons">
+          <button class="nav-icon-btn" type="button" aria-label="Search">
+            <svg class="nav-icon-svg" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.75" />
+              <path d="M16.5 16.5L21 21" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" />
+            </svg>
+          </button>
+          <button class="nav-icon-btn" type="button" aria-label="Shopping bag">
+            <svg class="nav-icon-svg" width="17" height="19" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M6.5 8.5h14L19 21H7L6.5 8.5zM9.5 8.5V6.5a3.5 3.5 0 117 0v2"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <button
+            class="nav-menu-toggle"
+            type="button"
+            aria-label="Menu"
+            aria-expanded="false"
+            aria-controls="site-menu"
+          >
+            <span class="nav-menu-bars" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="support-main">
+      <header class="support-hero">
+        <div class="support-hero-mark" aria-hidden="true">
+          <img src="../images/emperorishop_logo.png" alt="" width="140" height="40" decoding="async" />
+        </div>
+        <h1>Emperorishop Support</h1>
+        <p>Need help? Start here.</p>
+      </header>
+
+      <section class="category-strip support-lineup" aria-label="Product support topics">
+        <a href="../iphone/" class="category-item">
+          <div class="category-image">
+            <img
+              src="../store/images/iPhone%20image.png"
+              alt=""
+              width="92"
+              height="76"
+              decoding="async"
+            />
+          </div>
+          <h2>iPhone</h2>
+        </a>
+        <a href="../mac/" class="category-item">
+          <div class="category-image">
+            <img src="../store/images/Mac%20image.png" alt="" width="92" height="76" decoding="async" />
+          </div>
+          <h2>Mac</h2>
+        </a>
+        <a href="../ipad/" class="category-item">
+          <div class="category-image">
+            <img src="../store/images/iPad%20image.png" alt="" width="92" height="76" decoding="async" />
+          </div>
+          <h2>iPad</h2>
+        </a>
+        <a href="#" class="category-item">
+          <div class="category-image">
+            <img src="../store/images/Watch%20image.png" alt="" width="92" height="76" decoding="async" />
+          </div>
+          <h2>Watch</h2>
+        </a>
+        <a href="#" class="category-item">
+          <div class="category-image">
+            <img src="../store/images/Vision%20image.png" alt="" width="92" height="76" decoding="async" />
+          </div>
+          <h2>Vision</h2>
+        </a>
+        <a href="#" class="category-item">
+          <div class="category-image">
+            <img src="../store/images/AirPods%20image.png" alt="" width="92" height="76" decoding="async" />
+          </div>
+          <h2>AirPods</h2>
+        </a>
+        <a href="#support-faq" class="category-item">
+          <div class="category-image">
+            <img
+              src="../images/Card%20image.jpg"
+              alt=""
+              width="92"
+              height="76"
+              decoding="async"
+            />
+          </div>
+          <h2>Billing</h2>
+        </a>
+      </section>
+
+      <section class="support-topics" aria-labelledby="support-topics-heading">
+        <h2 id="support-topics-heading" class="support-topics-heading">More ways to get help</h2>
+        <div class="support-topics-grid">
+          <a href="#" class="support-topic-card">
+            <div class="support-topic-icon support-topic-icon--chat" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 4C7.58 4 4 7.13 4 11c0 1.8.72 3.45 1.9 4.7L4 20l4.55-1.75A7.9 7.9 0 0012 18c4.42 0 8-3.13 8-7s-3.58-7-8-7z"
+                  fill="currentColor"
+                />
+                <circle cx="9" cy="11" r="1.2" fill="#fff" />
+                <circle cx="12" cy="11" r="1.2" fill="#fff" />
+                <circle cx="15" cy="11" r="1.2" fill="#fff" />
+              </svg>
+            </div>
+            <h3>Chat with us</h3>
+            <p>Connect with a Specialist for quick answers about orders, setup, and repairs.</p>
+          </a>
+          <a href="#support-faq" class="support-topic-card">
+            <div class="support-topic-icon support-topic-icon--billing" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 4h10a2 2 0 012 2v14l-3-2-3 2-3-2-3 2V6a2 2 0 012-2z"
+                  stroke="currentColor"
+                  stroke-width="1.75"
+                  stroke-linejoin="round"
+                  fill="none"
+                />
+                <path d="M9 9h6M9 13h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3>Billing &amp; subscriptions</h3>
+            <p>Invoices, Emperorishop Installments, carrier charges, and payment receipts.</p>
+          </a>
+          <a href="#" class="support-topic-card">
+            <div class="support-topic-icon support-topic-icon--schedule" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="5" width="16" height="16" rx="2" stroke="currentColor" stroke-width="1.75" />
+                <path d="M4 9h16M8 3v4M16 3v4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" />
+                <path
+                  d="M9 14h2M13 14h2M9 17h6"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <h3>Schedule a visit</h3>
+            <p>Book an in-store session for setup, trade-in, or hands-on help with your devices.</p>
+          </a>
+        </div>
+      </section>
+
+      <section class="support-faq" id="support-faq" aria-labelledby="support-faq-heading">
+        <h2 id="support-faq-heading" class="support-faq-heading">Frequently asked questions</h2>
+        <p class="support-faq-intro">
+          How Emperorishop serves customers in Ghana—shipping, returns, and everyday support.
+        </p>
+        <div class="support-faq-list">
+          <details class="support-faq-item">
+            <summary>Where does Emperorishop ship, and how long does delivery take?</summary>
+            <div class="support-faq-answer">
+              <p>
+                We ship to addresses across Ghana. In-stock items typically leave our warehouse within 1–2 business
+                days; delivery time depends on your region and courier. You will receive tracking details by email or SMS
+                when your order ships.
+              </p>
+            </div>
+          </details>
+          <details class="support-faq-item">
+            <summary>What are your store hours and locations?</summary>
+            <div class="support-faq-answer">
+              <p>
+                Hours vary by location. Use “Find an Emperorishop location” in the footer to see current opening times,
+                public holiday closures, and whether appointments are required for certain services.
+              </p>
+            </div>
+          </details>
+          <details class="support-faq-item">
+            <summary>What is your return and refund policy?</summary>
+            <div class="support-faq-answer">
+              <p>
+                Most new, unopened products can be returned within 14 days of delivery for a refund or exchange, subject
+                to our Terms of Sale. Opened items may qualify when there is a verified defect or an error on our part.
+                Bring your proof of purchase and original packaging when returning in store.
+              </p>
+            </div>
+          </details>
+          <details class="support-faq-item">
+            <summary>How does trade-in work?</summary>
+            <div class="support-faq-answer">
+              <p>
+                Trade-in estimates are based on device model, condition, and function. Credit can be applied toward a new
+                purchase at checkout or in store. We may adjust the final value after inspection. See the trade-in page
+                for eligible devices and current promotions.
+              </p>
+            </div>
+          </details>
+          <details class="support-faq-item">
+            <summary>Do you offer repairs and warranty service?</summary>
+            <div class="support-faq-answer">
+              <p>
+                Yes. We perform in-warranty repairs through authorized channels and can help diagnose out-of-warranty
+                options. Have your serial number and purchase details ready when you contact support or visit a
+                location.
+              </p>
+            </div>
+          </details>
+          <details class="support-faq-item">
+            <summary>What payment options are available?</summary>
+            <div class="support-faq-answer">
+              <p>
+                We accept major cards, mobile money where supported, and Emperorishop Installments on qualifying orders.
+                Carrier financing may be available for eligible phone purchases—terms are shown at checkout.
+              </p>
+            </div>
+          </details>
+          <details class="support-faq-item">
+            <summary>How can I get help with a billing or subscription question?</summary>
+            <div class="support-faq-answer">
+              <p>
+                For order receipts, duplicate invoices, or unexpected charges, contact us with your order number. For
+                subscription services billed through Emperorishop, we can explain renewal dates, cancellations, and
+                refunds according to the provider’s rules.
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <section class="quick-links-band" aria-label="Quick Links">
+      <div class="quick-links-inner">
+        <div class="quick-links-row">
+          <div class="quick-links-left">
+            <h2 class="quick-links-title">Quick Links</h2>
+            <div class="quick-links-pills">
+              <a href="#">Find a Store</a>
+              <a href="#">Order Status</a>
+              <a href="#">Shopping Help</a>
+              <a href="#">Returns</a>
+              <a href="#">Your Saves</a>
+            </div>
+          </div>
+          <button type="button" class="quick-links-fab" aria-label="Chat with a specialist">
+            <span class="quick-links-avatar placeholder">Chat</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-wrap">
+        <div class="footer-links-grid">
+          <div class="footer-col">
+            <h4>Products</h4>
+            <a href="../store/">Store</a>
+            <a href="../mac/">Mac</a>
+            <a href="../ipad/">iPad</a>
+            <a href="../iphone/">iPhone</a>
+            <a href="#">Watch</a>
+            <a href="#">Vision</a>
+            <a href="#">AirPods</a>
+            <a href="#">TV &amp; Home</a>
+            <a href="../accessories/">Accessories</a>
+            <a href="./index.html" aria-current="page">Support</a>
+          </div>
+
+          <div class="footer-col">
+            <h4>Account &amp; orders</h4>
+            <a href="#">Your Emperorishop account</a>
+            <a href="#">Order status</a>
+            <a href="#">Shipping &amp; returns</a>
+            <a href="#">Help center</a>
+            <a href="#">Contact us</a>
+          </div>
+
+          <div class="footer-col">
+            <h4>Retail &amp; services</h4>
+            <a href="#">Find a location</a>
+            <a href="#">Device setup</a>
+            <a href="#">Trade-in</a>
+            <a href="#">Financing</a>
+            <a href="#">Refurbished devices</a>
+            <a href="#">Carrier offers</a>
+            <a href="#">Shopping help</a>
+          </div>
+
+          <div class="footer-col">
+            <h4>For organizations</h4>
+            <a href="#">Business</a>
+            <a href="#">Education</a>
+            <a href="#">Volume purchasing</a>
+          </div>
+
+          <div class="footer-col">
+            <h4>About Emperorishop</h4>
+            <a href="#">Our story</a>
+            <a href="#">News</a>
+            <a href="#">Careers</a>
+            <a href="#">Accessibility</a>
+            <a href="#">Sustainability</a>
+            <a href="#">Privacy</a>
+          </div>
+        </div>
+
+        <div class="footer-shop-note">
+          More ways to shop: <a href="#">Find an Emperorishop location</a> or an
+          <a href="#">authorized partner</a> near you. Or call
+          <a href="tel:+18005551234">1-800-555-1234</a>.
+        </div>
+
+        <div class="footer-legal">
+          <p>Copyright © 2026 Emperorishop. All rights reserved.</p>
+          <div class="footer-legal-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Sales and Refunds</a>
+            <a href="#">Legal</a>
+            <a href="#">Site Map</a>
+          </div>
+          <span>Ghana</span>
+        </div>
+      </div>
+    </footer>
+    <script src="../nav.js" defer></script>
+    <script src="../scroll-arrows.js" defer></script>
+  </body>
+</html>
