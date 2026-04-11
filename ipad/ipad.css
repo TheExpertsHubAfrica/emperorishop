@@ -1,4 +1,4 @@
-/* iPhone landing — Apple-style promo, hero picker, lineup, catalog */
+/* iPad landing — Apple-style promo, hero picker, lineup */
 
 * {
   box-sizing: border-box;
@@ -182,7 +182,7 @@ a:hover {
 }
 
 /* Promo ribbon */
-.iphone-promo {
+.ipad-promo {
   background: var(--bg-subtle);
   border-bottom: 1px solid var(--border);
   padding: 10px 18px;
@@ -192,13 +192,13 @@ a:hover {
   color: var(--secondary);
 }
 
-.iphone-promo a {
+.ipad-promo a {
   font-weight: 400;
   white-space: nowrap;
 }
 
 /* Hero */
-.iphone-hero {
+.ipad-hero {
   max-width: 1200px;
   margin: 0 auto;
   padding: 48px 18px 28px;
@@ -207,7 +207,7 @@ a:hover {
   box-sizing: border-box;
 }
 
-.iphone-hero-title {
+.ipad-hero-title {
   font-size: clamp(56px, 12vw, 96px);
   font-weight: 600;
   letter-spacing: -0.022em;
@@ -216,13 +216,13 @@ a:hover {
   text-align: left;
 }
 
-.iphone-picker-wrap {
+.ipad-picker-wrap {
   max-width: none;
   margin: 36px 0 0;
   padding: 0 0 8px;
 }
 
-.iphone-picker-rail {
+.ipad-picker-rail {
   display: flex;
   gap: 28px;
   overflow-x: auto;
@@ -232,11 +232,11 @@ a:hover {
   justify-content: flex-start;
 }
 
-.iphone-picker-rail::-webkit-scrollbar {
+.ipad-picker-rail::-webkit-scrollbar {
   display: none;
 }
 
-.iphone-picker-item {
+.ipad-picker-item {
   flex: 0 0 auto;
   scroll-snap-align: start;
   width: 88px;
@@ -245,15 +245,15 @@ a:hover {
   color: var(--text);
 }
 
-.iphone-picker-item:hover {
+.ipad-picker-item:hover {
   text-decoration: none;
 }
 
-.iphone-picker-item:hover .iphone-picker-label {
+.ipad-picker-item:hover .ipad-picker-label {
   color: var(--link);
 }
 
-.iphone-picker-thumb {
+.ipad-picker-thumb {
   width: 88px;
   height: 76px;
   margin: 0 auto;
@@ -265,7 +265,7 @@ a:hover {
   overflow: hidden;
 }
 
-.iphone-picker-thumb img {
+.ipad-picker-thumb img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -273,7 +273,20 @@ a:hover {
   display: block;
 }
 
-.iphone-picker-label {
+.ipad-picker-thumb--ipados {
+  background: linear-gradient(135deg, #5eb0e8 0%, #b4a7d6 33%, #f0a8c8 66%, #7bc8a4 100%);
+  border-radius: 18px;
+}
+
+.ipad-picker-ipados-icon {
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.03em;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.ipad-picker-label {
   margin-top: 10px;
   font-size: 12px;
   line-height: 1.25;
@@ -281,7 +294,7 @@ a:hover {
   color: var(--text);
 }
 
-.iphone-picker-badge {
+.ipad-picker-badge {
   display: inline-block;
   margin-top: 4px;
   font-size: 10px;
@@ -292,19 +305,19 @@ a:hover {
 }
 
 /* Explore lineup (Apple hub–style band + cards) */
-.iphone-explore {
+.ipad-explore {
   background: #f5f5f7;
   padding: 64px 0 80px;
   border-top: 1px solid rgba(0, 0, 0, 0.04);
 }
 
-.iphone-explore-inner {
+.ipad-explore-inner {
   max-width: 1320px;
   margin: 0 auto;
   padding: 0 max(22px, env(safe-area-inset-right)) 0 max(22px, env(safe-area-inset-left));
 }
 
-.iphone-explore-header {
+.ipad-explore-header {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
@@ -313,7 +326,7 @@ a:hover {
   margin-bottom: 32px;
 }
 
-.iphone-explore-title {
+.ipad-explore-title {
   font-size: clamp(32px, 4.2vw, 56px);
   font-weight: 600;
   letter-spacing: -0.022em;
@@ -321,7 +334,7 @@ a:hover {
   color: #1d1d1f;
 }
 
-.iphone-explore-link {
+.ipad-explore-link {
   font-size: 17px;
   font-weight: 400;
   letter-spacing: -0.022em;
@@ -329,7 +342,7 @@ a:hover {
   color: #06c;
 }
 
-.iphone-lineup-rail {
+.ipad-lineup-rail {
   display: flex;
   gap: 16px;
   overflow-x: auto;
@@ -339,11 +352,11 @@ a:hover {
   scroll-padding-inline: 22px;
 }
 
-.iphone-lineup-rail::-webkit-scrollbar {
+.ipad-lineup-rail::-webkit-scrollbar {
   display: none;
 }
 
-.iphone-lineup-card {
+.ipad-lineup-card {
   flex: 0 0 min(372px, calc(100vw - 40px));
   scroll-snap-align: start;
   border-radius: 30px;
@@ -356,7 +369,7 @@ a:hover {
     0 16px 40px rgba(0, 0, 0, 0.07);
 }
 
-.iphone-lineup-card-visual {
+.ipad-lineup-card-visual {
   position: relative;
   aspect-ratio: 1 / 1.05;
   display: flex;
@@ -366,23 +379,23 @@ a:hover {
   overflow: hidden;
 }
 
-.iphone-lineup-card-visual--pro {
+.ipad-lineup-card-visual--pro {
   background: linear-gradient(180deg, #2d2d2f 0%, #0d0d0d 55%, #000000 100%);
 }
 
-.iphone-lineup-card-visual--air {
+.ipad-lineup-card-visual--air {
   background: linear-gradient(180deg, #e5f3fc 0%, #b9dcfa 52%, #8ecbf5 100%);
 }
 
-.iphone-lineup-card-visual--std {
-  background: linear-gradient(180deg, #f0e8fa 0%, #dfd2f0 50%, #cfc0e6 100%);
+.ipad-lineup-card-visual--std {
+  background: linear-gradient(180deg, #ececee 0%, #e2e2e8 50%, #d8d8e0 100%);
 }
 
-.iphone-lineup-card-visual--e {
-  background: linear-gradient(180deg, #fdeef3 0%, #f7d5e0 55%, #f2c0d2 100%);
+.ipad-lineup-card-visual--mini {
+  background: linear-gradient(180deg, #eae8f0 0%, #ddd8ec 55%, #cfc4e2 100%);
 }
 
-.iphone-lineup-card-photo {
+.ipad-lineup-card-photo {
   width: 100%;
   height: 125%;
   max-height: none;
@@ -392,13 +405,13 @@ a:hover {
   flex-shrink: 0;
 }
 
-.iphone-lineup-card-body {
+.ipad-lineup-card-body {
   padding: 22px 28px 36px;
   text-align: center;
   background: #fff;
 }
 
-.iphone-lineup-swatches {
+.ipad-lineup-swatches {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -407,7 +420,7 @@ a:hover {
   margin: 0 0 18px;
 }
 
-.iphone-lineup-swatch {
+.ipad-lineup-swatch {
   width: 11px;
   height: 11px;
   border-radius: 50%;
@@ -419,23 +432,32 @@ a:hover {
   transition: box-shadow 0.15s ease, transform 0.15s ease;
 }
 
-.iphone-lineup-swatch:hover {
+.ipad-lineup-swatch:hover {
   transform: scale(1.08);
 }
 
-.iphone-lineup-swatch.is-active {
+.ipad-lineup-swatch.is-active {
   box-shadow:
     inset 0 0 0 1px rgba(0, 0, 0, 0.12),
     0 0 0 2px #fff,
     0 0 0 3.5px #1d1d1f;
 }
 
-.iphone-lineup-swatch:focus-visible {
+.ipad-lineup-swatch:focus-visible {
   outline: 2px solid #0071e3;
   outline-offset: 3px;
 }
 
-.iphone-lineup-card-title {
+.ipad-lineup-badge {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--orange-new);
+  letter-spacing: 0.02em;
+  margin: -8px 0 10px;
+}
+
+.ipad-lineup-card-title {
   margin: 0 0 10px;
   font-size: 24px;
   font-weight: 600;
@@ -444,7 +466,7 @@ a:hover {
   color: #1d1d1f;
 }
 
-.iphone-lineup-tagline {
+.ipad-lineup-tagline {
   margin: 0 auto 16px;
   max-width: 300px;
   font-size: 15px;
@@ -454,7 +476,7 @@ a:hover {
   color: #6e6e73;
 }
 
-.iphone-lineup-price {
+.ipad-lineup-price {
   margin: 0;
   font-size: 14px;
   font-weight: 400;
@@ -463,7 +485,7 @@ a:hover {
   color: #1d1d1f;
 }
 
-.iphone-lineup-dagger {
+.ipad-lineup-dagger {
   font-size: 0.75em;
   font-weight: 500;
   vertical-align: super;
@@ -471,14 +493,14 @@ a:hover {
   line-height: 0;
 }
 
-.iphone-lineup-footnote .iphone-lineup-dagger {
+.ipad-lineup-footnote .ipad-lineup-dagger {
   font-size: 1em;
   vertical-align: baseline;
   margin-right: 0.2em;
   font-weight: 600;
 }
 
-.iphone-lineup-cta {
+.ipad-lineup-cta {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -487,7 +509,7 @@ a:hover {
   margin-top: 20px;
 }
 
-.iphone-lineup-btn {
+.ipad-lineup-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -502,13 +524,13 @@ a:hover {
   text-decoration: none;
 }
 
-.iphone-lineup-btn:hover {
+.ipad-lineup-btn:hover {
   background: #0077ed;
   color: #fff;
   text-decoration: none;
 }
 
-.iphone-lineup-buy {
+.ipad-lineup-buy {
   font-size: 14px;
   font-weight: 400;
   letter-spacing: -0.01em;
@@ -516,11 +538,11 @@ a:hover {
   text-decoration: none;
 }
 
-.iphone-lineup-buy:hover {
+.ipad-lineup-buy:hover {
   text-decoration: underline;
 }
 
-.iphone-lineup-footnote {
+.ipad-lineup-footnote {
   margin: 16px 0 0;
   max-width: 720px;
   font-size: 12px;
@@ -530,20 +552,20 @@ a:hover {
 }
 
 /* Guided tour — “Take a closer look.” */
-.iphone-guided {
+.ipad-guided {
   background: #f5f5f7;
   padding: 80px 0;
   border-top: 1px solid rgba(0, 0, 0, 0.04);
 }
 
-.iphone-guided-inner {
+.ipad-guided-inner {
   max-width: 1320px;
   margin: 0 auto;
   padding: 0 max(22px, env(safe-area-inset-right)) 0 max(22px, env(safe-area-inset-left));
   box-sizing: border-box;
 }
 
-.iphone-guided-title {
+.ipad-guided-title {
   font-size: clamp(32px, 4.2vw, 48px);
   font-weight: 600;
   letter-spacing: -0.022em;
@@ -553,7 +575,7 @@ a:hover {
   margin: 0 0 28px;
 }
 
-.iphone-guided-banner {
+.ipad-guided-banner {
   display: flex;
   align-items: stretch;
   min-height: min(440px, 70vw);
@@ -566,7 +588,7 @@ a:hover {
     0 16px 40px rgba(0, 0, 0, 0.06);
 }
 
-.iphone-guided-copy {
+.ipad-guided-copy {
   flex: 1 1 44%;
   max-width: 520px;
   display: flex;
@@ -578,7 +600,7 @@ a:hover {
   background: linear-gradient(180deg, #ececee 0%, #e5e5ea 100%);
 }
 
-.iphone-guided-lede {
+.ipad-guided-lede {
   margin: 0 0 28px;
   font-size: clamp(19px, 2.4vw, 24px);
   font-weight: 600;
@@ -588,7 +610,7 @@ a:hover {
   max-width: 20em;
 }
 
-.iphone-guided-film-btn {
+.ipad-guided-film-btn {
   appearance: none;
   border: none;
   cursor: pointer;
@@ -603,16 +625,16 @@ a:hover {
   transition: background 0.15s ease, transform 0.15s ease;
 }
 
-.iphone-guided-film-btn:hover {
+.ipad-guided-film-btn:hover {
   background: #1d1d1f;
 }
 
-.iphone-guided-film-btn:focus-visible {
+.ipad-guided-film-btn:focus-visible {
   outline: 2px solid #0071e3;
   outline-offset: 3px;
 }
 
-.iphone-guided-media {
+.ipad-guided-media {
   flex: 1 1 56%;
   min-height: 280px;
   min-width: 0;
@@ -621,7 +643,7 @@ a:hover {
   position: relative;
 }
 
-.iphone-guided-media::after {
+.ipad-guided-media::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -630,7 +652,7 @@ a:hover {
 }
 
 /* Film modal */
-.iphone-visually-hidden {
+.ipad-visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -642,11 +664,11 @@ a:hover {
   border: 0;
 }
 
-body.iphone-film-open {
+body.ipad-film-open {
   overflow: hidden;
 }
 
-.iphone-film-modal {
+.ipad-film-modal {
   position: fixed;
   inset: 0;
   z-index: 100500;
@@ -658,18 +680,18 @@ body.iphone-film-open {
   box-sizing: border-box;
 }
 
-.iphone-film-modal[hidden] {
+.ipad-film-modal[hidden] {
   display: none;
 }
 
-.iphone-film-modal-backdrop {
+.ipad-film-modal-backdrop {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.82);
   cursor: pointer;
 }
 
-.iphone-film-modal-panel {
+.ipad-film-modal-panel {
   position: relative;
   z-index: 1;
   width: min(1100px, 100%);
@@ -683,7 +705,7 @@ body.iphone-film-open {
   box-shadow: 0 24px 80px rgba(0, 0, 0, 0.55);
 }
 
-.iphone-film-modal-close {
+.ipad-film-modal-close {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -703,22 +725,22 @@ body.iphone-film-open {
   transition: background 0.15s ease;
 }
 
-.iphone-film-modal-close:hover {
+.ipad-film-modal-close:hover {
   background: rgba(255, 255, 255, 0.28);
 }
 
-.iphone-film-modal-close:focus-visible {
+.ipad-film-modal-close:focus-visible {
   outline: 2px solid #fff;
   outline-offset: 2px;
 }
 
-.iphone-film-modal-video-wrap {
+.ipad-film-modal-video-wrap {
   position: relative;
   width: 100%;
   background: #000;
 }
 
-.iphone-film-video {
+.ipad-film-video {
   display: block;
   width: 100%;
   max-height: calc(100vh - 32px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
@@ -726,7 +748,7 @@ body.iphone-film-open {
   background: #000;
 }
 
-.iphone-film-fallback {
+.ipad-film-fallback {
   position: absolute;
   inset: 0;
   display: flex;
@@ -741,20 +763,20 @@ body.iphone-film-open {
 }
 
 /* Why buy here (aligned with mac-why) */
-.iphone-why {
+.ipad-why {
   padding: 56px 0 0;
   background: #f5f5f7;
   border-top: 1px solid #e5e5e7;
 }
 
-.iphone-why-inner {
+.ipad-why-inner {
   max-width: 1320px;
   margin: 0 auto;
   padding: 0 max(22px, env(safe-area-inset-right)) 0 max(22px, env(safe-area-inset-left));
   box-sizing: border-box;
 }
 
-.iphone-why-header {
+.ipad-why-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -763,7 +785,7 @@ body.iphone-film-open {
   flex-wrap: wrap;
 }
 
-.iphone-why-header h2 {
+.ipad-why-header h2 {
   font-size: clamp(28px, 3.8vw, 42px);
   line-height: 1.08;
   letter-spacing: -0.025em;
@@ -772,7 +794,7 @@ body.iphone-film-open {
   color: #1d1d1f;
 }
 
-.iphone-why-shop-link {
+.ipad-why-shop-link {
   color: #0066cc;
   font-size: 17px;
   text-decoration: none;
@@ -780,16 +802,16 @@ body.iphone-film-open {
   padding-top: 6px;
 }
 
-.iphone-why-shop-link:hover {
+.ipad-why-shop-link:hover {
   text-decoration: underline;
 }
 
-.iphone-why-carousel {
+.ipad-why-carousel {
   position: relative;
   padding-bottom: 52px;
 }
 
-.iphone-why-rail {
+.ipad-why-rail {
   display: flex;
   gap: 16px;
   overflow-x: auto;
@@ -798,20 +820,20 @@ body.iphone-film-open {
   padding: 4px 2px 8px;
 }
 
-.iphone-why-rail::-webkit-scrollbar {
+.ipad-why-rail::-webkit-scrollbar {
   display: none;
 }
 
-.iphone-why-rail:focus {
+.ipad-why-rail:focus {
   outline: none;
 }
 
-.iphone-why-rail:focus-visible {
+.ipad-why-rail:focus-visible {
   outline: 2px solid #0066cc;
   outline-offset: 4px;
 }
 
-.iphone-why-card {
+.ipad-why-card {
   flex: 0 0 min(320px, calc(100vw - 48px));
   scroll-snap-align: start;
   background: #fff;
@@ -824,7 +846,7 @@ body.iphone-film-open {
   text-align: left;
 }
 
-.iphone-why-label {
+.ipad-why-label {
   display: block;
   font-size: 12px;
   font-weight: 600;
@@ -832,7 +854,7 @@ body.iphone-film-open {
   margin-bottom: 8px;
 }
 
-.iphone-why-title {
+.ipad-why-title {
   font-size: clamp(22px, 2.5vw, 28px);
   font-weight: 600;
   letter-spacing: -0.02em;
@@ -841,14 +863,14 @@ body.iphone-film-open {
   color: #1d1d1f;
 }
 
-.iphone-why-sub {
+.ipad-why-sub {
   font-size: 15px;
   line-height: 1.45;
   color: #1d1d1f;
   margin-bottom: 18px;
 }
 
-.iphone-why-visual {
+.ipad-why-visual {
   position: relative;
   margin-top: auto;
   flex: 1;
@@ -857,14 +879,14 @@ body.iphone-film-open {
   flex-direction: column;
 }
 
-.iphone-why-img {
+.ipad-why-img {
   flex: 1;
   min-height: 188px;
   border-radius: 14px;
   font-size: 11px;
 }
 
-.iphone-why-img.placeholder {
+.ipad-why-img.placeholder {
   border: 2px dashed #c7c7cc;
   display: flex;
   align-items: center;
@@ -874,7 +896,7 @@ body.iphone-film-open {
   padding: 12px;
 }
 
-.iphone-why-expand {
+.ipad-why-expand {
   position: absolute;
   bottom: 12px;
   right: 12px;
@@ -893,30 +915,30 @@ body.iphone-film-open {
   padding: 0 0 2px;
 }
 
-.iphone-why-expand:hover {
+.ipad-why-expand:hover {
   background: #000;
 }
 
-.iphone-why-expand:focus-visible {
+.ipad-why-expand:focus-visible {
   outline: 2px solid #0066cc;
   outline-offset: 2px;
 }
 
-/* iPhone essentials (two-up grid) */
-.iphone-essentials {
+/* iPad essentials (two-up grid) */
+.ipad-essentials {
   background: #fff;
   padding: 56px 0 64px;
   border-top: 1px solid #e5e5e7;
 }
 
-.iphone-essentials-inner {
+.ipad-essentials-inner {
   max-width: 1320px;
   margin: 0 auto;
   padding: 0 max(22px, env(safe-area-inset-right)) 0 max(22px, env(safe-area-inset-left));
   box-sizing: border-box;
 }
 
-.iphone-essentials-header {
+.ipad-essentials-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -925,7 +947,7 @@ body.iphone-film-open {
   margin-bottom: 28px;
 }
 
-.iphone-essentials-title {
+.ipad-essentials-title {
   font-size: clamp(32px, 4.5vw, 48px);
   line-height: 1.06;
   letter-spacing: -0.025em;
@@ -936,7 +958,7 @@ body.iphone-film-open {
   max-width: min(720px, 85vw);
 }
 
-.iphone-essentials-all-link {
+.ipad-essentials-all-link {
   color: #0066cc;
   font-size: 17px;
   text-decoration: none;
@@ -945,17 +967,17 @@ body.iphone-film-open {
   letter-spacing: -0.022em;
 }
 
-.iphone-essentials-all-link:hover {
+.ipad-essentials-all-link:hover {
   text-decoration: underline;
 }
 
-.iphone-essentials-grid {
+.ipad-essentials-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
 }
 
-.iphone-essentials-card {
+.ipad-essentials-card {
   background: #f5f5f7;
   border-radius: 28px;
   padding: 40px 28px 0;
@@ -969,11 +991,11 @@ body.iphone-film-open {
   transition: box-shadow 0.2s ease;
 }
 
-.iphone-essentials-card:hover {
+.ipad-essentials-card:hover {
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.07);
 }
 
-.iphone-essentials-new {
+.ipad-essentials-new {
   display: block;
   font-size: 12px;
   font-weight: 600;
@@ -982,7 +1004,7 @@ body.iphone-film-open {
   margin-bottom: 10px;
 }
 
-.iphone-essentials-card h3 {
+.ipad-essentials-card h3 {
   font-size: clamp(24px, 2.8vw, 32px);
   font-weight: 600;
   letter-spacing: -0.02em;
@@ -992,7 +1014,7 @@ body.iphone-film-open {
   color: #1d1d1f;
 }
 
-.iphone-essentials-card p {
+.ipad-essentials-card p {
   font-size: 17px;
   line-height: 1.45;
   color: #1d1d1f;
@@ -1000,13 +1022,13 @@ body.iphone-film-open {
   margin: 0 0 14px;
 }
 
-.iphone-essentials-card p sup {
+.ipad-essentials-card p sup {
   font-size: 0.65em;
   font-weight: 400;
   vertical-align: super;
 }
 
-.iphone-essentials-link {
+.ipad-essentials-link {
   color: #0066cc;
   text-decoration: none;
   font-size: 17px;
@@ -1014,11 +1036,11 @@ body.iphone-film-open {
   letter-spacing: -0.022em;
 }
 
-.iphone-essentials-link:hover {
+.ipad-essentials-link:hover {
   text-decoration: underline;
 }
 
-.iphone-essentials-media {
+.ipad-essentials-media {
   margin-top: auto;
   margin-left: -28px;
   margin-right: -28px;
@@ -1031,7 +1053,7 @@ body.iphone-film-open {
   border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-.iphone-essentials-trio {
+.ipad-essentials-trio {
   display: flex;
   width: 100%;
   align-items: flex-end;
@@ -1040,7 +1062,7 @@ body.iphone-film-open {
   padding: 20px 16px 24px;
 }
 
-.iphone-essentials-thumb {
+.ipad-essentials-thumb {
   flex: 1;
   max-width: 120px;
   aspect-ratio: 3 / 4;
@@ -1057,7 +1079,7 @@ body.iphone-film-open {
   padding: 8px;
 }
 
-.iphone-essentials-media.placeholder {
+.ipad-essentials-media.placeholder {
   font-size: 12px;
   font-weight: 500;
   color: #86868b;
@@ -1184,12 +1206,12 @@ body.iphone-film-open {
     overflow: hidden;
   }
 
-  body.nav-drawer-open .iphone-promo,
-  body.nav-drawer-open .iphone-hero,
-  body.nav-drawer-open .iphone-explore,
-  body.nav-drawer-open .iphone-guided,
-  body.nav-drawer-open .iphone-why,
-  body.nav-drawer-open .iphone-essentials,
+  body.nav-drawer-open .ipad-promo,
+  body.nav-drawer-open .ipad-hero,
+  body.nav-drawer-open .ipad-explore,
+  body.nav-drawer-open .ipad-guided,
+  body.nav-drawer-open .ipad-why,
+  body.nav-drawer-open .ipad-essentials,
   body.nav-drawer-open .site-footer {
     position: relative;
     z-index: 0;
@@ -1263,87 +1285,87 @@ body.iphone-film-open {
     max-width: min(190px, 52vw);
   }
 
-  .iphone-hero {
+  .ipad-hero {
     padding-top: 32px;
     padding-left: max(18px, env(safe-area-inset-left));
     padding-right: max(18px, env(safe-area-inset-right));
   }
 
-  .iphone-guided {
+  .ipad-guided {
     padding: 56px 0 64px;
   }
 
-  .iphone-guided-banner {
+  .ipad-guided-banner {
     flex-direction: column;
     min-height: 0;
   }
 
-  .iphone-guided-copy {
+  .ipad-guided-copy {
     flex: none;
     max-width: none;
     padding: 40px 28px 36px;
   }
 
-  .iphone-guided-media {
+  .ipad-guided-media {
     flex: none;
     min-height: 220px;
   }
 
-  .iphone-why {
+  .ipad-why {
     padding-top: 40px;
   }
 
-  .iphone-why-header h2 {
+  .ipad-why-header h2 {
     font-size: clamp(24px, 6vw, 34px);
   }
 
-  .iphone-why-shop-link {
+  .ipad-why-shop-link {
     padding-top: 0;
   }
 
-  .iphone-why-card {
+  .ipad-why-card {
     flex-basis: calc(100vw - 44px);
     min-height: 400px;
   }
 
-  .iphone-why-carousel {
+  .ipad-why-carousel {
     padding-bottom: 56px;
   }
 
-  .iphone-essentials {
+  .ipad-essentials {
     padding: 40px 0 48px;
   }
 
-  .iphone-essentials-all-link {
+  .ipad-essentials-all-link {
     padding-top: 0;
   }
 
-  .iphone-essentials-grid {
+  .ipad-essentials-grid {
     grid-template-columns: 1fr;
   }
 
-  .iphone-essentials-card {
+  .ipad-essentials-card {
     padding: 32px 22px 0;
     border-radius: 24px;
   }
 
-  .iphone-essentials-card:hover {
+  .ipad-essentials-card:hover {
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
   }
 
-  .iphone-essentials-media {
+  .ipad-essentials-media {
     margin-left: -22px;
     margin-right: -22px;
     width: calc(100% + 44px);
     min-height: 220px;
   }
 
-  .iphone-essentials-trio {
+  .ipad-essentials-trio {
     padding: 16px 12px 20px;
     gap: 8px;
   }
 
-  .iphone-essentials-thumb {
+  .ipad-essentials-thumb {
     max-width: none;
     min-width: 0;
   }

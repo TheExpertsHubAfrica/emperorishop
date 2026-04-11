@@ -55,6 +55,16 @@ body {
   font-size: 12px;
   font-weight: 400;
   letter-spacing: -0.01em;
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+}
+
+.brand-logo {
+  display: block;
+  height: 27px;
+  width: auto;
+  max-width: min(210px, 48vw);
 }
 
 .menu {
@@ -491,6 +501,11 @@ body {
 
   .nav-menu-toggle {
     display: inline-flex;
+  }
+
+  .brand-logo {
+    height: 24px;
+    max-width: min(190px, 52vw);
   }
 
   .top-nav .menu {

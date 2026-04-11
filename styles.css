@@ -85,6 +85,16 @@ main {
   font-weight: 600;
   letter-spacing: -0.02em;
   white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+}
+
+.brand-logo {
+  display: block;
+  height: 27px;
+  width: auto;
+  max-width: min(210px, 48vw);
 }
 
 .menu {
@@ -198,13 +208,107 @@ main {
   display: block;
 }
 
-.hero-photo.hero-photo-iphone {
+.hero-iphone-carousel {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.hero-iphone-slides {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.hero-iphone-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.85s cubic-bezier(0.25, 0.1, 0.25, 1);
+  will-change: transform;
+}
+
+/* View 0: first slide centered; second off-screen to the right */
+.hero-iphone-slides--view-0 .hero-iphone-slide:nth-child(1) {
+  transform: translateX(0);
+  z-index: 2;
+}
+
+.hero-iphone-slides--view-0 .hero-iphone-slide:nth-child(2) {
+  transform: translateX(100%);
+  z-index: 1;
+}
+
+/* View 1: first exits left; second enters from right to center */
+.hero-iphone-slides--view-1 .hero-iphone-slide:nth-child(1) {
+  transform: translateX(-100%);
+  z-index: 1;
+}
+
+.hero-iphone-slides--view-1 .hero-iphone-slide:nth-child(2) {
+  transform: translateX(0);
+  z-index: 2;
+}
+
+.hero-iphone-slide .hero-photo.hero-photo-iphone,
+.hero-iphone-slide-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: 50% 0%;
   transform: translateY(-6%) scale(1.06);
   transform-origin: 50% 35%;
+  display: block;
+}
+
+.hero-iphone-carousel-dots {
+  position: absolute;
+  bottom: clamp(14px, 3.5vh, 32px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  pointer-events: auto;
+}
+
+.hero-iphone-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.65);
+}
+
+.hero-iphone-dot:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-iphone-dot.is-active {
+  background: rgba(0, 0, 0, 0.55);
+  transform: scale(1.2);
+}
+
+.hero-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .hero-iphone-copy {
@@ -528,6 +632,11 @@ main {
   color: #f5f5f7;
 }
 
+.promo-yellow {
+  background: #e1980d;
+  color: #f7f7f5;
+}
+
 .promo-light {
   background: #f5f5f7;
   color: var(--text);
@@ -669,7 +778,7 @@ main {
   height: auto;
   flex: 0 0 auto;
   overflow: hidden;
-  background: #000;
+  background: #e1980d;
   padding: 40px 32px 8px;
   box-sizing: border-box;
 }
@@ -695,7 +804,7 @@ main {
   width: 100%;
   margin: 0;
   padding: 8px 28px 36px;
-  background: #000;
+  background: #e1980d;
   pointer-events: auto;
 }
 
@@ -956,7 +1065,7 @@ main {
     padding-bottom: min(26vh, 220px);
   }
 
-  .hero-photo.hero-photo-iphone {
+  .hero-iphone-slide .hero-photo.hero-photo-iphone {
     transform: translateY(-7%) scale(1.07);
     transform-origin: 50% 32%;
   }
@@ -1144,9 +1253,9 @@ main {
     height: 48px;
   }
 
-  .brand {
-    font-size: 14px;
-    font-weight: 600;
+  .brand-logo {
+    height: 24px;
+    max-width: min(190px, 52vw);
   }
 
   /* Mobile product heroes: same image band sizes as before; copy absolutely layered (desktop-style) */
@@ -1209,13 +1318,21 @@ main {
     z-index: 0;
   }
 
-  .hero-photo.hero-photo-iphone {
+  .hero-iphone-slide .hero-photo.hero-photo-iphone {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: 50% 28%;
     transform: none;
     display: block;
+  }
+
+  .hero-iphone-slide:nth-child(2) .hero-photo.hero-photo-iphone {
+    object-position: 50% 22%;
+  }
+
+  .hero-iphone-carousel-dots {
+    bottom: clamp(10px, 2.5vh, 22px);
   }
 
   .hero-iphone .hero-copy h1,
@@ -1706,7 +1823,11 @@ main {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-photo.hero-photo-iphone {
+  .hero-iphone-slide {
+    transition: none;
+  }
+
+  .hero-iphone-slide .hero-photo.hero-photo-iphone {
     transform: none;
     object-position: 50% 18%;
   }

@@ -45,6 +45,16 @@ body {
   font-size: 14px;
   font-weight: 600;
   letter-spacing: -0.02em;
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+}
+
+.brand-logo {
+  display: block;
+  height: 27px;
+  width: auto;
+  max-width: min(210px, 48vw);
 }
 
 .mac-menu {
@@ -1046,6 +1056,11 @@ body {
   .mac-nav-wrap {
     height: 48px;
     padding: 0 max(10px, env(safe-area-inset-right)) 0 max(10px, env(safe-area-inset-left));
+  }
+
+  .brand-logo {
+    height: 24px;
+    max-width: min(190px, 52vw);
   }
 
   .mac-main {

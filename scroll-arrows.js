@@ -9,6 +9,9 @@
     ".iphone-picker-rail",
     ".iphone-lineup-rail",
     ".iphone-why-rail",
+    ".ipad-picker-rail",
+    ".ipad-lineup-rail",
+    ".ipad-why-rail",
   ];
 
   function enhanceRail(rail) {

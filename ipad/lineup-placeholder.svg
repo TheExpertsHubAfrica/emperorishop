@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900" role="img" aria-label="Product image placeholder">
+  <defs>
+    <linearGradient id="ph-shine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.06"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="900" fill="url(#ph-shine)"/>
+  <rect x="245" y="95" width="410" height="760" rx="56" ry="56" fill="rgba(255,255,255,0.22)" stroke="rgba(0,0,0,0.08)" stroke-width="2"/>
+  <rect x="285" y="145" width="330" height="330" rx="28" ry="28" fill="rgba(0,0,0,0.04)"/>
+  <circle cx="450" cy="700" r="36" fill="rgba(0,0,0,0.06)"/>
+</svg>
