@@ -1006,6 +1006,15 @@ main {
   text-decoration: none;
 }
 
+.footer-pricing-note {
+  margin: 0;
+  padding: 8px 0 12px;
+  border-bottom: 1px solid #d2d2d7;
+  font-size: 11px;
+  line-height: 1.4;
+  color: #6e6e73;
+}
+
 .footer-legal {
   display: flex;
   align-items: center;

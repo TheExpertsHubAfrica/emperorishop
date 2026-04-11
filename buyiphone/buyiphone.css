@@ -7,7 +7,8 @@
 :root {
   --bg-page: #ffffff;
   --bg-subtle: #f5f5f7;
-  --bg-gallery: #ededf0;
+  /* Align with product PNG/WebP backdrops (Apple store–style light gray) */
+  --bg-gallery: #f5f5f7;
   --text: #1d1d1f;
   --text-secondary: #424245;
   --muted: #6e6e73;
@@ -236,17 +237,22 @@ body {
 .iphone-visual-stage {
   background: var(--bg-gallery);
   border-radius: 18px;
-  min-height: 520px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  max-height: min(640px, 85vh);
+  min-height: 0;
   overflow: hidden;
+  display: block;
+  position: relative;
 }
 
 .iphone-visual-stage img {
-  width: min(82%, 480px);
-  height: auto;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
+  object-position: center;
   display: block;
 }
 
@@ -454,6 +460,11 @@ body {
   letter-spacing: -0.01em;
 }
 
+.checkout-panel small.buyiphone-pricing-note {
+  margin-top: 8px;
+  font-size: 11px;
+}
+
 @media (max-width: 980px) {
   :root {
     --toolbar-sticky-h: 0px;
@@ -483,7 +494,8 @@ body {
   }
 
   .iphone-visual-stage {
-    min-height: 380px;
+    max-height: min(92vw, 560px);
+    aspect-ratio: 1 / 1;
   }
 }
 

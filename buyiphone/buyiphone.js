@@ -1,6 +1,10 @@
 (function () {
-  var DEF_IMG = "../store/images/iPhone%2017%20Pro%20image.jpeg";
-  var E_IMG = "../store/images/iPhone%2017e%20image.jpeg";
+  /** Used only until HERO_BY_FAMILY assigns per-family images from ./images/ */
+  var FALLBACK_IMG = "../store/images/iPhone%2017%20Pro%20image.jpeg";
+
+  function img(name) {
+    return "./images/" + encodeURIComponent(name);
+  }
 
   var COLOR_HEX = {
     silver: "#dedede",
@@ -99,7 +103,7 @@
   var data = {
     iphonex: {
       label: "iPhone X",
-      defaultImage: DEF_IMG,
+      defaultImage: FALLBACK_IMG,
       models: oneModel("iphonex", "iPhone X", "5.8-inch display", 999),
       finishes: finishesFromList("Silver, Space Gray"),
       storages: storagesFromPrices([
@@ -109,7 +113,7 @@
     },
     iphonexr: {
       label: "iPhone XR",
-      defaultImage: DEF_IMG,
+      defaultImage: FALLBACK_IMG,
       models: oneModel("iphonexr", "iPhone XR", "6.1-inch display", 749),
       finishes: finishesFromList("Black, White, Blue, Yellow, Coral, Product RED"),
       storages: storagesFromPrices([
@@ -120,7 +124,7 @@
     },
     iphonexs: {
       label: "iPhone XS",
-      defaultImage: DEF_IMG,
+      defaultImage: FALLBACK_IMG,
       models: oneModel("iphonexs", "iPhone XS", "5.8-inch display", 999),
       finishes: finishesFromList("Space Gray, Silver, Gold"),
       storages: storagesFromPrices([
@@ -131,7 +135,7 @@
     },
     iphonexsmax: {
       label: "iPhone XS Max",
-      defaultImage: DEF_IMG,
+      defaultImage: FALLBACK_IMG,
       models: oneModel("iphonexsmax", "iPhone XS Max", "6.5-inch display", 1099),
       finishes: finishesFromList("Space Gray, Silver, Gold"),
       storages: storagesFromPrices([
@@ -142,7 +146,7 @@
     },
     iphone11: {
       label: "iPhone 11",
-      defaultImage: DEF_IMG,
+      defaultImage: FALLBACK_IMG,
       models: oneModel("iphone11", "iPhone 11", "6.1-inch display", 699),
       finishes: finishesFromList("Black, White, Yellow, Purple, Green, Product RED"),
       storages: storagesFromPrices([
@@ -153,7 +157,7 @@
     },
     iphone11pro: {
       label: "iPhone 11 Pro",
-      defaultImage: DEF_IMG,
+      defaultImage: FALLBACK_IMG,
       models: oneModel("iphone11pro", "iPhone 11 Pro", "5.8-inch display", 999),
       finishes: finishesFromList("Space Gray, Silver, Gold, Midnight Green"),
       storages: storagesFromPrices([
@@ -164,7 +168,7 @@
     },
     iphone11promax: {
       label: "iPhone 11 Pro Max",
-      defaultImage: DEF_IMG,
+      defaultImage: FALLBACK_IMG,
       models: oneModel("iphone11promax", "iPhone 11 Pro Max", "6.5-inch display", 1099),
       finishes: finishesFromList("Space Gray, Silver, Gold, Midnight Green"),
       storages: storagesFromPrices([
@@ -175,7 +179,7 @@
     },
     iphone12mini: {
       label: "iPhone 12 mini",
-      defaultImage: DEF_IMG,
+      defaultImage: FALLBACK_IMG,
       models: oneModel("iphone12mini", "iPhone 12 mini", "5.4-inch display", 699),
       finishes: finishesFromList("Black, White, Red, Green, Blue, Purple"),
       storages: storagesFromPrices([
@@ -186,7 +190,7 @@
     },
     iphone12: {
       label: "iPhone 12",
-      defaultImage: DEF_IMG,
+      defaultImage: FALLBACK_IMG,
       models: oneModel("iphone12", "iPhone 12", "6.1-inch display", 799),
       finishes: finishesFromList("Black, White, Red, Green, Blue, Purple"),
       storages: storagesFromPrices([
@@ -197,7 +201,7 @@
     },
     iphone12pro: {
       label: "iPhone 12 Pro",
-      defaultImage: DEF_IMG,
+      defaultImage: FALLBACK_IMG,
       models: oneModel("iphone12pro", "iPhone 12 Pro", "6.1-inch display", 999),
       finishes: finishesFromList("Graphite, Silver, Gold, Pacific Blue"),
       storages: storagesFromPrices([
@@ -208,7 +212,7 @@
     },
     iphone12promax: {
       label: "iPhone 12 Pro Max",
-      defaultImage: DEF_IMG,
+      defaultImage: FALLBACK_IMG,
       models: oneModel("iphone12promax", "iPhone 12 Pro Max", "6.7-inch display", 1099),
       finishes: finishesFromList("Graphite, Silver, Gold, Pacific Blue"),
       storages: storagesFromPrices([
@@ -219,7 +223,7 @@
     },
     iphone13mini: {
       label: "iPhone 13 mini",
-      defaultImage: DEF_IMG,
+      defaultImage: FALLBACK_IMG,
       models: oneModel("iphone13mini", "iPhone 13 mini", "5.4-inch display", 699),
       finishes: finishesFromList("Midnight, Starlight, Blue, Pink, Green, Product RED"),
       storages: storagesFromPrices([
@@ -230,7 +234,7 @@
     },
     iphone13: {
       label: "iPhone 13",
-      defaultImage: DEF_IMG,
+      defaultImage: FALLBACK_IMG,
       models: oneModel("iphone13", "iPhone 13", "6.1-inch display", 799),
       finishes: finishesFromList("Midnight, Starlight, Blue, Pink, Green, Product RED"),
       storages: storagesFromPrices([
@@ -241,7 +245,7 @@
     },
     iphone13pro: {
       label: "iPhone 13 Pro",
-      defaultImage: DEF_IMG,
+      defaultImage: FALLBACK_IMG,
       models: oneModel("iphone13pro", "iPhone 13 Pro", "6.1-inch display", 999),
       finishes: finishesFromList("Graphite, Gold, Silver, Sierra Blue, Alpine Green"),
       storages: storagesFromPrices([
@@ -253,7 +257,7 @@
     },
     iphone13promax: {
       label: "iPhone 13 Pro Max",
-      defaultImage: DEF_IMG,
+      defaultImage: FALLBACK_IMG,
       models: oneModel("iphone13promax", "iPhone 13 Pro Max", "6.7-inch display", 1099),
       finishes: finishesFromList("Graphite, Gold, Silver, Sierra Blue, Alpine Green"),
       storages: storagesFromPrices([
@@ -265,7 +269,7 @@
     },
     iphone14: {
       label: "iPhone 14",
-      defaultImage: DEF_IMG,
+      defaultImage: FALLBACK_IMG,
       models: oneModel("iphone14", "iPhone 14", "6.1-inch display", 799),
       finishes: finishesFromList("Midnight, Starlight, Blue, Purple, Yellow, Product RED"),
       storages: storagesFromPrices([
@@ -276,7 +280,7 @@
     },
     iphone14plus: {
       label: "iPhone 14 Plus",
-      defaultImage: DEF_IMG,
+      defaultImage: FALLBACK_IMG,
       models: oneModel("iphone14plus", "iPhone 14 Plus", "6.7-inch display", 899),
       finishes: finishesFromList("Midnight, Starlight, Blue, Purple, Yellow, Product RED"),
       storages: storagesFromPrices([
@@ -287,7 +291,7 @@
     },
     iphone14pro: {
       label: "iPhone 14 Pro",
-      defaultImage: DEF_IMG,
+      defaultImage: FALLBACK_IMG,
       models: oneModel("iphone14pro", "iPhone 14 Pro", "6.1-inch display", 999),
       finishes: finishesFromList("Space Black, Silver, Gold, Deep Purple"),
       storages: storagesFromPrices([
@@ -299,7 +303,7 @@
     },
     iphone14promax: {
       label: "iPhone 14 Pro Max",
-      defaultImage: DEF_IMG,
+      defaultImage: FALLBACK_IMG,
       models: oneModel("iphone14promax", "iPhone 14 Pro Max", "6.7-inch display", 1099),
       finishes: finishesFromList("Space Black, Silver, Gold, Deep Purple"),
       storages: storagesFromPrices([
@@ -311,7 +315,7 @@
     },
     iphone15: {
       label: "iPhone 15",
-      defaultImage: DEF_IMG,
+      defaultImage: FALLBACK_IMG,
       models: oneModel("iphone15", "iPhone 15", "6.1-inch display", 799),
       finishes: finishesFromList("Black, Blue, Green, Yellow, Pink"),
       storages: storagesFromPrices([
@@ -322,7 +326,7 @@
     },
     iphone15plus: {
       label: "iPhone 15 Plus",
-      defaultImage: DEF_IMG,
+      defaultImage: FALLBACK_IMG,
       models: oneModel("iphone15plus", "iPhone 15 Plus", "6.7-inch display", 899),
       finishes: finishesFromList("Black, Blue, Green, Yellow, Pink"),
       storages: storagesFromPrices([
@@ -333,7 +337,7 @@
     },
     iphone15pro: {
       label: "iPhone 15 Pro",
-      defaultImage: DEF_IMG,
+      defaultImage: FALLBACK_IMG,
       models: oneModel("iphone15pro", "iPhone 15 Pro", "6.1-inch display", 999),
       finishes: finishesFromList(
         "Natural Titanium, Blue Titanium, White Titanium, Black Titanium"
@@ -347,7 +351,7 @@
     },
     iphone15promax: {
       label: "iPhone 15 Pro Max",
-      defaultImage: DEF_IMG,
+      defaultImage: FALLBACK_IMG,
       models: oneModel("iphone15promax", "iPhone 15 Pro Max", "6.7-inch display", 1199),
       finishes: finishesFromList(
         "Natural Titanium, Blue Titanium, White Titanium, Black Titanium"
@@ -360,21 +364,21 @@
     },
     iphone16e: {
       label: "iPhone 16e",
-      defaultImage: E_IMG,
+      defaultImage: FALLBACK_IMG,
       models: oneModel("iphone16e", "iPhone 16e", "6.1-inch display", 599),
       finishes: finishesFromList("Black, White"),
       storages: storagesFromPrices([{ label: "128GB", price: 599 }]),
     },
     iphone16: {
       label: "iPhone 16",
-      defaultImage: DEF_IMG,
+      defaultImage: FALLBACK_IMG,
       models: oneModel("iphone16", "iPhone 16", "6.1-inch display", 699),
       finishes: finishesFromList("Black, White, Pink, Teal, Ultramarine"),
       storages: storagesFromPrices([{ label: "128GB", price: 699 }]),
     },
     iphone16plus: {
       label: "iPhone 16 Plus",
-      defaultImage: DEF_IMG,
+      defaultImage: FALLBACK_IMG,
       models: oneModel("iphone16plus", "iPhone 16 Plus", "6.7-inch display", 799),
       finishes: finishesFromList("Black, White, Pink, Teal, Ultramarine"),
       storages: storagesFromPrices([
@@ -384,7 +388,7 @@
     },
     iphone16pro: {
       label: "iPhone 16 Pro",
-      defaultImage: DEF_IMG,
+      defaultImage: FALLBACK_IMG,
       models: oneModel("iphone16pro", "iPhone 16 Pro", "6.3-inch display", 999),
       finishes: finishesFromList(
         "Black Titanium, White Titanium, Natural Titanium, Desert Titanium"
@@ -398,7 +402,7 @@
     },
     iphone16promax: {
       label: "iPhone 16 Pro Max",
-      defaultImage: DEF_IMG,
+      defaultImage: FALLBACK_IMG,
       models: oneModel("iphone16promax", "iPhone 16 Pro Max", "6.9-inch display", 1199),
       finishes: finishesFromList(
         "Black Titanium, White Titanium, Natural Titanium, Desert Titanium"
@@ -411,7 +415,7 @@
     },
     iphone17e: {
       label: "iPhone 17e",
-      defaultImage: E_IMG,
+      defaultImage: FALLBACK_IMG,
       models: oneModel("iphone17e", "iPhone 17e", "6.1-inch display", 599),
       finishes: finishesFromList("Black, White, Soft Pink"),
       storages: storagesFromPrices([
@@ -421,7 +425,7 @@
     },
     iphone17: {
       label: "iPhone 17",
-      defaultImage: DEF_IMG,
+      defaultImage: FALLBACK_IMG,
       models: oneModel("iphone17", "iPhone 17", "6.3-inch display", 799),
       finishes: finishesFromList("Lavender, Sage, Mist Blue, White, Black"),
       storages: storagesFromPrices([
@@ -431,7 +435,7 @@
     },
     iphoneair: {
       label: "iPhone Air",
-      defaultImage: DEF_IMG,
+      defaultImage: FALLBACK_IMG,
       models: oneModel("iphoneair", "iPhone Air", "6.5-inch display", 999),
       finishes: finishesFromList("Sky Blue, Light Gold, Cloud White, Space Black"),
       storages: storagesFromPrices([
@@ -442,26 +446,26 @@
     },
     iphone17pro: {
       label: "iPhone 17 Pro",
-      defaultImage: DEF_IMG,
+      defaultImage: FALLBACK_IMG,
       models: oneModel("iphone17pro", "iPhone 17 Pro", "6.3-inch display", 1099),
       finishes: [
         {
           id: "silver-0",
           label: "Silver",
           swatch: "#dedede",
-          image: DEF_IMG,
+          image: FALLBACK_IMG,
         },
         {
           id: "deepblue-1",
           label: "Deep Blue",
           swatch: "#1e2d4a",
-          image: DEF_IMG,
+          image: FALLBACK_IMG,
         },
         {
           id: "cosmic-2",
           label: "Cosmic Orange",
           swatch: "#c45c2a",
-          image: DEF_IMG,
+          image: FALLBACK_IMG,
         },
       ],
       storages: storagesFromPrices([
@@ -472,26 +476,26 @@
     },
     iphone17promax: {
       label: "iPhone 17 Pro Max",
-      defaultImage: DEF_IMG,
+      defaultImage: FALLBACK_IMG,
       models: oneModel("iphone17promax", "iPhone 17 Pro Max", "6.9-inch display", 1199),
       finishes: [
         {
           id: "silver-0",
           label: "Silver",
           swatch: "#dedede",
-          image: DEF_IMG,
+          image: FALLBACK_IMG,
         },
         {
           id: "deepblue-1",
           label: "Deep Blue",
           swatch: "#1e2d4a",
-          image: DEF_IMG,
+          image: FALLBACK_IMG,
         },
         {
           id: "cosmic-2",
           label: "Cosmic Orange",
           swatch: "#c45c2a",
-          image: DEF_IMG,
+          image: FALLBACK_IMG,
         },
       ],
       storages: storagesFromPrices([
@@ -502,6 +506,58 @@
       ]),
     },
   };
+
+  /** Hero art in buyiphone/images — filenames must match files on disk */
+  var HERO_BY_FAMILY = {
+    iphonex: img("iphone x.jpeg"),
+    iphonexr: FALLBACK_IMG,
+    iphonexs: img("iphone xs.jpeg"),
+    iphonexsmax: img("iphone xs max.jpeg"),
+    iphone11: img("iphone 11.jpeg"),
+    iphone11pro: img("iphone 11 pro.jpeg"),
+    iphone11promax: img("iphone 11 pro max.jpeg"),
+    iphone12mini: img("iphone 12 mini.jpeg"),
+    iphone12: img("iphone 12.jpeg"),
+    iphone12pro: img("iphone 12 pro.jpeg"),
+    iphone12promax: img("iphone 12 pro max.jpeg"),
+    iphone13mini: img("iphone 13 mini.jpeg"),
+    iphone13: img("iphone 13.jpeg"),
+    iphone13pro: img("iphone 13 pro.jpeg"),
+    iphone13promax: img("iphone 13 pro max.jpeg"),
+    iphone14: img("iphone 14.jpeg"),
+    iphone14plus: img("iphone 14 plus.jpeg"),
+    iphone14pro: img("iphone 14 pro.jpeg"),
+    iphone14promax: img("iphone 14 Pro Max.jpeg"),
+    iphone15: img("iphone 15.jpeg"),
+    iphone15plus: img("iphone 15 plus.jpeg"),
+    iphone15pro: img("iphone 15 pro.jpeg"),
+    iphone15promax: img("iphone 15 pro max.jpeg"),
+    iphone16e: img("iphone 16e.jpeg"),
+    iphone16: img("iphone-16-model.webp"),
+    iphone16plus: img("iphone 16 plus.jpeg"),
+    iphone16pro: img("iphone 16 pro.jpeg"),
+    iphone16promax: img("iphone 16 Pro max.jpeg"),
+    iphone17e: img("iphone-17e-finish.webp"),
+    iphone17: img("iphone-16-model.webp"),
+    iphoneair: img("iphone-air-finish-collection.webp"),
+    iphone17pro: img("iphone-17-pro-finish-select-6-3inch.webp"),
+    iphone17promax: img("iphone-17-pro-max-select-6-9inch.webp"),
+  };
+
+  Object.keys(HERO_BY_FAMILY).forEach(function (k) {
+    if (data[k]) {
+      data[k].defaultImage = HERO_BY_FAMILY[k];
+    }
+  });
+
+  var img17ProFinishes = img("iphone-17-pro-finish-select-6-3inch.webp");
+  data.iphone17pro.finishes.forEach(function (f) {
+    f.image = img17ProFinishes;
+  });
+  var img17ProMaxFinishes = img("iphone-17-pro-max-select-6-9inch.webp");
+  data.iphone17promax.finishes.forEach(function (f) {
+    f.image = img17ProMaxFinishes;
+  });
 
   /** Newest first in the family dropdown */
   var FAMILY_ORDER = [
@@ -579,11 +635,20 @@
   };
 
   function formatPrice(value) {
-    return "$" + value.toLocaleString("en-US");
+    var rate =
+      typeof window !== "undefined" && typeof window.EMPERORISHOP_USD_TO_GHS === "number"
+        ? window.EMPERORISHOP_USD_TO_GHS
+        : 15.5;
+    var ghs = Math.round(Number(value) * rate);
+    return "GH₵\u00a0" + ghs.toLocaleString("en-GH");
   }
 
-  function monthlyFromPrice(price) {
-    return (price / 24).toFixed(2);
+  function monthlyGhsFromPrice(price) {
+    var rate =
+      typeof window !== "undefined" && typeof window.EMPERORISHOP_USD_TO_GHS === "number"
+        ? window.EMPERORISHOP_USD_TO_GHS
+        : 15.5;
+    return Math.round((Number(price) / 24) * rate);
   }
 
   function selectedBase() {
@@ -639,8 +704,8 @@
       toolbarPrice.textContent =
         "From " +
         formatPrice(model.price) +
-        " or $" +
-        monthlyFromPrice(model.price) +
+        " or GH₵\u00a0" +
+        monthlyGhsFromPrice(model.price).toLocaleString("en-GH") +
         "/mo. for 24 mo.*";
     } else {
       toolbarPrice.textContent = "Choose a model to see pricing.";
@@ -683,8 +748,8 @@
       price.innerHTML =
         "From " +
         formatPrice(model.price) +
-        "<br />or $" +
-        monthlyFromPrice(model.price) +
+        "<br />or GH₵\u00a0" +
+        monthlyGhsFromPrice(model.price).toLocaleString("en-GH") +
         "/mo. for 24 mo.";
 
       button.appendChild(main);
@@ -782,8 +847,8 @@
       price.innerHTML =
         "From " +
         formatPrice(totalPrice) +
-        "<br />or $" +
-        monthlyFromPrice(totalPrice) +
+        "<br />or GH₵\u00a0" +
+        monthlyGhsFromPrice(totalPrice).toLocaleString("en-GH") +
         "/mo. for 24 mo.";
 
       button.appendChild(main);
@@ -822,16 +887,16 @@
       storage.label +
       " — " +
       formatPrice(totalPrice) +
-      " or $" +
-      monthlyFromPrice(totalPrice) +
+      " or GH₵\u00a0" +
+      monthlyGhsFromPrice(totalPrice).toLocaleString("en-GH") +
       "/mo. for 24 mo.";
     checkoutBtn.disabled = false;
 
     toolbarPrice.textContent =
       "From " +
       formatPrice(totalPrice) +
-      " or $" +
-      monthlyFromPrice(totalPrice) +
+      " or GH₵\u00a0" +
+      monthlyGhsFromPrice(totalPrice).toLocaleString("en-GH") +
       "/mo. for 24 mo.*";
   }
 
