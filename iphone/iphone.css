@@ -258,7 +258,7 @@ a:hover {
   height: 76px;
   margin: 0 auto;
   border-radius: 14px;
-  background: var(--bg-subtle);
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -366,20 +366,11 @@ a:hover {
   overflow: hidden;
 }
 
-.iphone-lineup-card-visual--pro {
-  background: linear-gradient(180deg, #2d2d2f 0%, #0d0d0d 55%, #000000 100%);
-}
-
-.iphone-lineup-card-visual--air {
-  background: linear-gradient(180deg, #e5f3fc 0%, #b9dcfa 52%, #8ecbf5 100%);
-}
-
-.iphone-lineup-card-visual--std {
-  background: linear-gradient(180deg, #f0e8fa 0%, #dfd2f0 50%, #cfc0e6 100%);
-}
-
+.iphone-lineup-card-visual--pro,
+.iphone-lineup-card-visual--air,
+.iphone-lineup-card-visual--std,
 .iphone-lineup-card-visual--e {
-  background: linear-gradient(180deg, #fdeef3 0%, #f7d5e0 55%, #f2c0d2 100%);
+  background: transparent;
 }
 
 .iphone-lineup-card-photo {
@@ -554,38 +545,45 @@ a:hover {
 }
 
 .iphone-guided-banner {
+  position: relative;
   display: flex;
   align-items: stretch;
-  min-height: min(440px, 70vw);
+  min-height: min(440px, 52vw);
   border-radius: 28px;
   overflow: hidden;
-  background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.04);
   box-shadow:
     0 2px 8px rgba(0, 0, 0, 0.04),
     0 16px 40px rgba(0, 0, 0, 0.06);
+  background-color: #e8e8ed;
+  background-image: url("./images/guided_tour__large.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
 .iphone-guided-copy {
-  flex: 1 1 44%;
-  max-width: 520px;
+  flex: 0 0 42%;
+  max-width: 560px;
+  min-width: min(100%, 260px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 48px 40px;
-  background: linear-gradient(180deg, #ececee 0%, #e5e5ea 100%);
+  padding: 48px 36px 48px 48px;
+  box-sizing: border-box;
+  background: transparent;
 }
 
 .iphone-guided-lede {
-  margin: 0 0 28px;
-  font-size: clamp(19px, 2.4vw, 24px);
+  margin: 0 0 24px;
+  font-size: clamp(21px, 2.6vw, 28px);
   font-weight: 600;
   letter-spacing: -0.022em;
-  line-height: 1.25;
+  line-height: 1.2;
   color: #1d1d1f;
-  max-width: 20em;
+  max-width: 18em;
 }
 
 .iphone-guided-film-btn {
@@ -610,23 +608,6 @@ a:hover {
 .iphone-guided-film-btn:focus-visible {
   outline: 2px solid #0071e3;
   outline-offset: 3px;
-}
-
-.iphone-guided-media {
-  flex: 1 1 56%;
-  min-height: 280px;
-  min-width: 0;
-  background:
-    linear-gradient(105deg, #dfe0e4 0%, #f0e8e8 28%, #f4c4a8 62%, #e85d2a 100%);
-  position: relative;
-}
-
-.iphone-guided-media::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse 70% 90% at 75% 50%, rgba(255, 255, 255, 0.22) 0%, transparent 72%);
-  pointer-events: none;
 }
 
 /* Film modal */
@@ -861,17 +842,16 @@ body.iphone-film-open {
   flex: 1;
   min-height: 188px;
   border-radius: 14px;
-  font-size: 11px;
+  overflow: hidden;
+  background: transparent;
 }
 
-.iphone-why-img.placeholder {
-  border: 2px dashed #c7c7cc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #86868b;
-  padding: 12px;
+.iphone-why-img img {
+  width: 100%;
+  height: 100%;
+  min-height: 188px;
+  object-fit: cover;
+  display: block;
 }
 
 .iphone-why-expand {
@@ -1027,43 +1007,20 @@ body.iphone-film-open {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.35) 0%, rgba(0, 0, 0, 0.02) 100%);
+  background: transparent;
   border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-.iphone-essentials-trio {
-  display: flex;
+.iphone-essentials-media--photo {
+  align-items: stretch;
+  min-height: 0;
+  padding: 0;
+}
+
+.iphone-essentials-media--photo img {
   width: 100%;
-  align-items: flex-end;
-  justify-content: center;
-  gap: 10px;
-  padding: 20px 16px 24px;
-}
-
-.iphone-essentials-thumb {
-  flex: 1;
-  max-width: 120px;
-  aspect-ratio: 3 / 4;
-  border-radius: 16px;
-  background: linear-gradient(180deg, #fff 0%, #ececee 100%);
-  border: 2px dashed #c7c7cc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 11px;
-  font-weight: 500;
-  color: #86868b;
-  text-align: center;
-  padding: 8px;
-}
-
-.iphone-essentials-media.placeholder {
-  font-size: 12px;
-  font-weight: 500;
-  color: #86868b;
-  align-items: center;
-  padding: 32px 20px;
-  background: linear-gradient(180deg, #ebebed 0%, #e2e2e6 100%);
+  height: auto;
+  display: block;
 }
 
 /* Site footer (aligned with Mac / Store) */
@@ -1275,18 +1232,18 @@ body.iphone-film-open {
 
   .iphone-guided-banner {
     flex-direction: column;
-    min-height: 0;
+    justify-content: center;
+    align-items: stretch;
+    min-height: min(460px, 118vw);
+    background-position: 52% 36%;
   }
 
   .iphone-guided-copy {
     flex: none;
+    width: 100%;
     max-width: none;
-    padding: 40px 28px 36px;
-  }
-
-  .iphone-guided-media {
-    flex: none;
-    min-height: 220px;
+    min-width: 0;
+    padding: 36px 24px 40px;
   }
 
   .iphone-why {
@@ -1336,16 +1293,6 @@ body.iphone-film-open {
     margin-right: -22px;
     width: calc(100% + 44px);
     min-height: 220px;
-  }
-
-  .iphone-essentials-trio {
-    padding: 16px 12px 20px;
-    gap: 8px;
-  }
-
-  .iphone-essentials-thumb {
-    max-width: none;
-    min-width: 0;
   }
 
   .footer-wrap {
