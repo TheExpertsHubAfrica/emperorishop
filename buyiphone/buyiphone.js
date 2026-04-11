@@ -934,8 +934,46 @@
 
   checkoutBtn.addEventListener("click", function () {
     if (checkoutBtn.disabled) return;
+    if (typeof window.emperorishopOpenCheckout === "function") {
+      window.emperorishopOpenCheckout();
+      return;
+    }
     window.location.href = "#checkout";
   });
+
+  window.emperorishopBuyiPhone = {
+    getOrderSnapshot: function () {
+      var base = selectedBase();
+      var model = selectedModel();
+      var finish = selectedFinish();
+      var storage = selectedStorage();
+      if (!base || !model || !finish || !storage) return null;
+      var totalUsd = model.price + storage.addPrice;
+      var rate =
+        typeof window !== "undefined" && typeof window.EMPERORISHOP_USD_TO_GHS === "number"
+          ? window.EMPERORISHOP_USD_TO_GHS
+          : 15.5;
+      var totalGhs = Math.round(totalUsd * rate);
+      return {
+        familyKey: state.baseKey,
+        familyLabel: base.label,
+        modelName: model.name,
+        finishLabel: finish.label,
+        storageLabel: storage.label,
+        totalUsd: totalUsd,
+        totalGhs: totalGhs,
+        amountPesewas: Math.max(100, Math.round(totalGhs * 100)),
+        summaryLine:
+          base.label +
+          " • " +
+          model.name +
+          " • " +
+          finish.label +
+          " • " +
+          storage.label,
+      };
+    },
+  };
 
   renderBaseOptions();
   baseSelect.value = "iphone17promax";

@@ -133,7 +133,7 @@
           <div class="checkout-panel">
             <p id="selectionSummary">Select a family, model, finish, and storage to continue.</p>
             <button id="checkoutBtn" type="button" disabled>Proceed to Checkout</button>
-            <small>Details submission and payment integration will be added later.</small>
+            <small>Secure checkout with Paystack. You’ll confirm your details before payment.</small>
             <small class="buyiphone-pricing-note">
               Prices shown in Ghana cedis convert from U.S. dollar list prices at GH₵15.50 per US$1.
             </small>
@@ -142,8 +142,145 @@
       </section>
     </main>
 
+    <!-- Checkout: customer details -->
+    <div
+      id="checkout-modal-customer"
+      class="checkout-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="checkout-modal-customer-title"
+      hidden
+    >
+      <div class="checkout-modal-backdrop" id="checkout-modal-customer-backdrop" tabindex="-1"></div>
+      <div class="checkout-modal-panel">
+        <div class="checkout-modal-header">
+          <h2 id="checkout-modal-customer-title" class="checkout-modal-title">Checkout</h2>
+          <button type="button" class="checkout-modal-close" id="checkout-modal-customer-close" aria-label="Close">
+            ×
+          </button>
+        </div>
+        <p class="checkout-modal-lead">
+          Complete your details to continue to secure payment. Currency: <strong>GHS</strong> (Paystack).
+        </p>
+        <div class="checkout-order-card">
+          <p class="checkout-order-label">Your configuration</p>
+          <p class="checkout-order-preview" id="checkout-order-preview"></p>
+          <p class="checkout-amount-display" id="checkout-amount-display"></p>
+        </div>
+
+        <form id="checkout-customer-form" novalidate>
+          <div class="checkout-field">
+            <label for="checkout-customer-name">Full name</label>
+            <input id="checkout-customer-name" name="customerName" type="text" autocomplete="name" required />
+          </div>
+          <div class="checkout-field">
+            <label for="checkout-customer-email">Email</label>
+            <input id="checkout-customer-email" name="customerEmail" type="email" autocomplete="email" required />
+          </div>
+          <div class="checkout-field">
+            <label for="checkout-customer-phone">Phone</label>
+            <input
+              id="checkout-customer-phone"
+              name="customerPhone"
+              type="tel"
+              autocomplete="tel"
+              inputmode="tel"
+              placeholder="+233…"
+              required
+            />
+          </div>
+
+          <fieldset class="checkout-fieldset">
+            <legend>Fulfillment</legend>
+            <label class="checkout-radio">
+              <input type="radio" name="fulfillment" value="pickup" checked />
+              <span>Pick up from store</span>
+            </label>
+            <label class="checkout-radio">
+              <input type="radio" name="fulfillment" value="delivery" />
+              <span>Delivery</span>
+            </label>
+          </fieldset>
+
+          <div id="checkout-delivery-panel" class="checkout-delivery-panel" hidden>
+            <p class="checkout-delivery-intro">
+              For delivery, use your current location <em>or</em> enter your address (or both).
+            </p>
+            <button type="button" class="checkout-btn-secondary" id="checkout-btn-use-location">
+              Use my current location
+            </button>
+            <p class="checkout-location-hint" id="checkout-location-hint" hidden></p>
+            <input type="hidden" id="checkout-delivery-lat" name="deliveryLat" value="" />
+            <input type="hidden" id="checkout-delivery-lng" name="deliveryLng" value="" />
+
+            <div class="checkout-field">
+              <label for="checkout-address-line1">Address line</label>
+              <input id="checkout-address-line1" name="addressLine1" type="text" autocomplete="street-address" />
+            </div>
+            <div class="checkout-field-row">
+              <div class="checkout-field">
+                <label for="checkout-city">City</label>
+                <input id="checkout-city" name="city" type="text" autocomplete="address-level2" />
+              </div>
+              <div class="checkout-field">
+                <label for="checkout-region">Region</label>
+                <input id="checkout-region" name="region" type="text" autocomplete="address-level1" />
+              </div>
+            </div>
+            <div class="checkout-field">
+              <label for="checkout-delivery-notes">Delivery notes (optional)</label>
+              <textarea id="checkout-delivery-notes" name="deliveryNotes" rows="2"></textarea>
+            </div>
+          </div>
+
+          <fieldset class="checkout-fieldset">
+            <legend>Payment</legend>
+            <label class="checkout-radio">
+              <input type="radio" name="paymentPlan" value="full" id="checkout-payment-full" checked />
+              <span>Pay in full</span>
+            </label>
+            <label class="checkout-radio checkout-radio--disabled">
+              <input type="radio" name="paymentPlan" value="installments" id="checkout-payment-installments" disabled />
+              <span>Installments <span class="checkout-badge">Coming soon</span></span>
+            </label>
+          </fieldset>
+
+          <p class="checkout-form-error" id="checkout-form-error" role="alert" hidden></p>
+
+          <button type="submit" class="checkout-submit">Continue to payment</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Checkout: success -->
+    <div
+      id="checkout-modal-success"
+      class="checkout-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="checkout-modal-success-title"
+      hidden
+    >
+      <div class="checkout-modal-backdrop" id="checkout-modal-success-backdrop" tabindex="-1"></div>
+      <div class="checkout-modal-panel checkout-modal-panel--narrow">
+        <div class="checkout-modal-header">
+          <h2 id="checkout-modal-success-title" class="checkout-modal-title">Thank you</h2>
+          <button type="button" class="checkout-modal-close" id="checkout-modal-success-dismiss" aria-label="Close">
+            ×
+          </button>
+        </div>
+        <p class="checkout-success-text">
+          Your payment was received. A confirmation email is on its way to your inbox. Our team has been notified.
+        </p>
+        <button type="button" class="checkout-submit" id="checkout-modal-success-done">Done</button>
+      </div>
+    </div>
+
     <script src="../js/pricing.js" defer></script>
+    <script src="./checkout-config.js" defer></script>
+    <script src="https://js.paystack.co/v1/inline.js" defer></script>
     <script src="../nav.js" defer></script>
     <script src="./buyiphone.js" defer></script>
+    <script src="./checkout.js" defer></script>
   </body>
 </html>
