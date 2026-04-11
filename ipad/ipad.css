@@ -258,7 +258,7 @@ a:hover {
   height: 76px;
   margin: 0 auto;
   border-radius: 14px;
-  background: var(--bg-subtle);
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -271,19 +271,6 @@ a:hover {
   object-fit: contain;
   object-position: center;
   display: block;
-}
-
-.ipad-picker-thumb--ipados {
-  background: linear-gradient(135deg, #5eb0e8 0%, #b4a7d6 33%, #f0a8c8 66%, #7bc8a4 100%);
-  border-radius: 18px;
-}
-
-.ipad-picker-ipados-icon {
-  font-size: 11px;
-  font-weight: 700;
-  color: #fff;
-  letter-spacing: -0.03em;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .ipad-picker-label {
@@ -379,20 +366,11 @@ a:hover {
   overflow: hidden;
 }
 
-.ipad-lineup-card-visual--pro {
-  background: linear-gradient(180deg, #2d2d2f 0%, #0d0d0d 55%, #000000 100%);
-}
-
-.ipad-lineup-card-visual--air {
-  background: linear-gradient(180deg, #e5f3fc 0%, #b9dcfa 52%, #8ecbf5 100%);
-}
-
-.ipad-lineup-card-visual--std {
-  background: linear-gradient(180deg, #ececee 0%, #e2e2e8 50%, #d8d8e0 100%);
-}
-
+.ipad-lineup-card-visual--pro,
+.ipad-lineup-card-visual--air,
+.ipad-lineup-card-visual--std,
 .ipad-lineup-card-visual--mini {
-  background: linear-gradient(180deg, #eae8f0 0%, #ddd8ec 55%, #cfc4e2 100%);
+  background: transparent;
 }
 
 .ipad-lineup-card-photo {
@@ -576,38 +554,45 @@ a:hover {
 }
 
 .ipad-guided-banner {
+  position: relative;
   display: flex;
   align-items: stretch;
-  min-height: min(440px, 70vw);
+  min-height: min(440px, 52vw);
   border-radius: 28px;
   overflow: hidden;
-  background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.04);
   box-shadow:
     0 2px 8px rgba(0, 0, 0, 0.04),
     0 16px 40px rgba(0, 0, 0, 0.06);
+  background-color: #e8e8ed;
+  background-image: url("./images/guided_tour__large.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
 .ipad-guided-copy {
-  flex: 1 1 44%;
-  max-width: 520px;
+  flex: 0 0 42%;
+  max-width: 560px;
+  min-width: min(100%, 260px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 48px 40px;
-  background: linear-gradient(180deg, #ececee 0%, #e5e5ea 100%);
+  padding: 48px 36px 48px 48px;
+  box-sizing: border-box;
+  background: transparent;
 }
 
 .ipad-guided-lede {
-  margin: 0 0 28px;
-  font-size: clamp(19px, 2.4vw, 24px);
+  margin: 0 0 24px;
+  font-size: clamp(21px, 2.6vw, 28px);
   font-weight: 600;
   letter-spacing: -0.022em;
-  line-height: 1.25;
+  line-height: 1.2;
   color: #1d1d1f;
-  max-width: 20em;
+  max-width: 18em;
 }
 
 .ipad-guided-film-btn {
@@ -632,23 +617,6 @@ a:hover {
 .ipad-guided-film-btn:focus-visible {
   outline: 2px solid #0071e3;
   outline-offset: 3px;
-}
-
-.ipad-guided-media {
-  flex: 1 1 56%;
-  min-height: 280px;
-  min-width: 0;
-  background:
-    linear-gradient(105deg, #dfe0e4 0%, #f0e8e8 28%, #f4c4a8 62%, #e85d2a 100%);
-  position: relative;
-}
-
-.ipad-guided-media::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse 70% 90% at 75% 50%, rgba(255, 255, 255, 0.22) 0%, transparent 72%);
-  pointer-events: none;
 }
 
 /* Film modal */
@@ -883,17 +851,16 @@ body.ipad-film-open {
   flex: 1;
   min-height: 188px;
   border-radius: 14px;
-  font-size: 11px;
+  overflow: hidden;
+  background: transparent;
 }
 
-.ipad-why-img.placeholder {
-  border: 2px dashed #c7c7cc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #86868b;
-  padding: 12px;
+.ipad-why-img img {
+  width: 100%;
+  height: 100%;
+  min-height: 188px;
+  object-fit: cover;
+  display: block;
 }
 
 .ipad-why-expand {
@@ -924,21 +891,21 @@ body.ipad-film-open {
   outline-offset: 2px;
 }
 
-/* iPad essentials (two-up grid) */
-.ipad-essentials {
-  background: #fff;
+/* iPad credentials — Apple Pencil / Keyboards (two-up, asymmetric layout) */
+.ipad-credentials {
+  background: #f5f5f7;
   padding: 56px 0 64px;
   border-top: 1px solid #e5e5e7;
 }
 
-.ipad-essentials-inner {
+.ipad-credentials-inner {
   max-width: 1320px;
   margin: 0 auto;
   padding: 0 max(22px, env(safe-area-inset-right)) 0 max(22px, env(safe-area-inset-left));
   box-sizing: border-box;
 }
 
-.ipad-essentials-header {
+.ipad-credentials-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -947,7 +914,7 @@ body.ipad-film-open {
   margin-bottom: 28px;
 }
 
-.ipad-essentials-title {
+.ipad-credentials-title {
   font-size: clamp(32px, 4.5vw, 48px);
   line-height: 1.06;
   letter-spacing: -0.025em;
@@ -958,7 +925,7 @@ body.ipad-film-open {
   max-width: min(720px, 85vw);
 }
 
-.ipad-essentials-all-link {
+.ipad-credentials-shop-link {
   color: #0066cc;
   font-size: 17px;
   text-decoration: none;
@@ -967,125 +934,89 @@ body.ipad-film-open {
   letter-spacing: -0.022em;
 }
 
-.ipad-essentials-all-link:hover {
+.ipad-credentials-shop-link:hover {
   text-decoration: underline;
 }
 
-.ipad-essentials-grid {
+.ipad-credentials-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
 }
 
-.ipad-essentials-card {
-  background: #f5f5f7;
+.ipad-credentials-card {
+  background: #fff;
   border-radius: 28px;
-  padding: 40px 28px 0;
-  text-align: center;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   border: 1px solid rgba(0, 0, 0, 0.04);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
   transition: box-shadow 0.2s ease;
 }
 
-.ipad-essentials-card:hover {
+.ipad-credentials-card:hover {
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.07);
 }
 
-.ipad-essentials-new {
-  display: block;
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--orange-new);
-  letter-spacing: 0.02em;
-  margin-bottom: 10px;
+.ipad-credentials-copy {
+  text-align: center;
+  padding: 40px 28px 24px;
+  box-sizing: border-box;
 }
 
-.ipad-essentials-card h3 {
+.ipad-credentials-card--copy-first .ipad-credentials-copy {
+  padding-bottom: 20px;
+}
+
+.ipad-credentials-card--media-first .ipad-credentials-copy {
+  padding: 28px 28px 40px;
+}
+
+.ipad-credentials-card h3 {
   font-size: clamp(24px, 2.8vw, 32px);
   font-weight: 600;
   letter-spacing: -0.02em;
   line-height: 1.12;
   margin: 0 0 10px;
-  max-width: 400px;
   color: #1d1d1f;
 }
 
-.ipad-essentials-card p {
+.ipad-credentials-tagline {
   font-size: 17px;
   line-height: 1.45;
   color: #1d1d1f;
-  max-width: 420px;
-  margin: 0 0 14px;
+  margin: 0 0 16px;
 }
 
-.ipad-essentials-card p sup {
-  font-size: 0.65em;
-  font-weight: 400;
-  vertical-align: super;
-}
-
-.ipad-essentials-link {
+.ipad-credentials-link {
   color: #0066cc;
   text-decoration: none;
   font-size: 17px;
-  margin-bottom: 28px;
   letter-spacing: -0.022em;
 }
 
-.ipad-essentials-link:hover {
+.ipad-credentials-link:hover {
   text-decoration: underline;
 }
 
-.ipad-essentials-media {
-  margin-top: auto;
-  margin-left: -28px;
-  margin-right: -28px;
-  width: calc(100% + 56px);
-  min-height: 260px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.35) 0%, rgba(0, 0, 0, 0.02) 100%);
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
-}
-
-.ipad-essentials-trio {
-  display: flex;
+.ipad-credentials-media {
+  margin: 0;
   width: 100%;
-  align-items: flex-end;
-  justify-content: center;
-  gap: 10px;
-  padding: 20px 16px 24px;
+  display: block;
+  background: transparent;
+  line-height: 0;
 }
 
-.ipad-essentials-thumb {
-  flex: 1;
-  max-width: 120px;
-  aspect-ratio: 3 / 4;
-  border-radius: 16px;
-  background: linear-gradient(180deg, #fff 0%, #ececee 100%);
-  border: 2px dashed #c7c7cc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 11px;
-  font-weight: 500;
-  color: #86868b;
-  text-align: center;
-  padding: 8px;
+.ipad-credentials-card--copy-first .ipad-credentials-media {
+  margin-top: auto;
 }
 
-.ipad-essentials-media.placeholder {
-  font-size: 12px;
-  font-weight: 500;
-  color: #86868b;
-  align-items: center;
-  padding: 32px 20px;
-  background: linear-gradient(180deg, #ebebed 0%, #e2e2e6 100%);
+.ipad-credentials-media img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* Site footer (aligned with Mac / Store) */
@@ -1211,7 +1142,7 @@ body.ipad-film-open {
   body.nav-drawer-open .ipad-explore,
   body.nav-drawer-open .ipad-guided,
   body.nav-drawer-open .ipad-why,
-  body.nav-drawer-open .ipad-essentials,
+  body.nav-drawer-open .ipad-credentials,
   body.nav-drawer-open .site-footer {
     position: relative;
     z-index: 0;
@@ -1297,18 +1228,18 @@ body.ipad-film-open {
 
   .ipad-guided-banner {
     flex-direction: column;
-    min-height: 0;
+    justify-content: center;
+    align-items: stretch;
+    min-height: min(460px, 118vw);
+    background-position: 52% 36%;
   }
 
   .ipad-guided-copy {
     flex: none;
+    width: 100%;
     max-width: none;
-    padding: 40px 28px 36px;
-  }
-
-  .ipad-guided-media {
-    flex: none;
-    min-height: 220px;
+    min-width: 0;
+    padding: 36px 24px 40px;
   }
 
   .ipad-why {
@@ -1332,42 +1263,32 @@ body.ipad-film-open {
     padding-bottom: 56px;
   }
 
-  .ipad-essentials {
+  .ipad-credentials {
     padding: 40px 0 48px;
   }
 
-  .ipad-essentials-all-link {
+  .ipad-credentials-shop-link {
     padding-top: 0;
   }
 
-  .ipad-essentials-grid {
+  .ipad-credentials-grid {
     grid-template-columns: 1fr;
   }
 
-  .ipad-essentials-card {
-    padding: 32px 22px 0;
+  .ipad-credentials-card {
     border-radius: 24px;
   }
 
-  .ipad-essentials-card:hover {
+  .ipad-credentials-card:hover {
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
   }
 
-  .ipad-essentials-media {
-    margin-left: -22px;
-    margin-right: -22px;
-    width: calc(100% + 44px);
-    min-height: 220px;
+  .ipad-credentials-copy {
+    padding: 32px 22px 20px;
   }
 
-  .ipad-essentials-trio {
-    padding: 16px 12px 20px;
-    gap: 8px;
-  }
-
-  .ipad-essentials-thumb {
-    max-width: none;
-    min-width: 0;
+  .ipad-credentials-card--media-first .ipad-credentials-copy {
+    padding: 24px 22px 36px;
   }
 
   .footer-wrap {
