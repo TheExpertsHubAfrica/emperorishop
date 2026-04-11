@@ -7,7 +7,7 @@
   var slides = root.querySelectorAll(".hero-iphone-slide");
   var mqReduce = window.matchMedia("(prefers-reduced-motion: reduce)");
   var reduceMotion = mqReduce.matches;
-  var intervalMs = 4000;
+  var intervalMs = 2500;
   var timer = null;
   var index = 0;
 
