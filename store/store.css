@@ -194,6 +194,12 @@ body {
   flex: 0 0 92px;
 }
 
+a.category-item {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 .latest-cards {
   margin-top: 24px;
   display: flex;
@@ -272,6 +278,12 @@ body {
   height: 100%;
   overflow: hidden;
   isolation: isolate;
+}
+
+a.latest-card-stage {
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 
 .latest-card-stage::after {
