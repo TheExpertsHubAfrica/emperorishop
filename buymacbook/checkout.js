@@ -25,6 +25,10 @@
   var pendingSnap = null;
 
   function getOrderSnapshot() {
+    if (window.emperorishopBuyiPad && window.emperorishopBuyiPad.getOrderSnapshot) {
+      var ip = window.emperorishopBuyiPad.getOrderSnapshot();
+      if (ip) return ip;
+    }
     if (window.emperorishopBuyMacbook && window.emperorishopBuyMacbook.getOrderSnapshot) {
       var m = window.emperorishopBuyMacbook.getOrderSnapshot();
       if (m) return m;
