@@ -604,6 +604,166 @@ main {
     0 1px 2px rgba(255, 255, 255, 0.88);
 }
 
+/* AirPods Max 2 — headline behind product, color loop */
+.hero-airpods-max {
+  margin-top: 80px;
+  padding: 0 max(12px, env(safe-area-inset-right)) 0 max(12px, env(safe-area-inset-left));
+  text-align: center;
+  background: transparent;
+}
+
+.airpods-max-shell {
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+.airpods-max-stage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: min(88vh, 920px);
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+}
+
+.airpods-max-center {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: min(62vh, 640px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(48px, 8vh, 100px) max(16px, env(safe-area-inset-right)) 0
+    max(16px, env(safe-area-inset-left));
+}
+
+.airpods-max-bg-title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -46%);
+  margin: 0;
+  padding: 0 12px;
+  font-size: clamp(40px, 11vw, 132px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+  color: #1d1d1d;
+  white-space: nowrap;
+  user-select: none;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.airpods-max-visual {
+  position: relative;
+  z-index: 2;
+  width: min(92vw, 760px);
+  height: min(52vh, 520px);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.airpods-max-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+  display: block;
+  transition: opacity 0.4s ease-in-out;
+  will-change: opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .airpods-max-photo {
+    transition: none;
+  }
+}
+
+.airpods-max-bar {
+  position: relative;
+  z-index: 3;
+  margin-top: auto;
+  flex-shrink: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px 28px;
+  padding: clamp(16px, 3vh, 28px) clamp(22px, 3.5vw, 40px) clamp(28px, 4vh, 44px);
+  text-align: left;
+  background: transparent;
+}
+
+.airpods-max-copy {
+  flex: 1 1 220px;
+  min-width: min(100%, 280px);
+}
+
+.airpods-max-tagline {
+  margin: 0;
+  font-size: clamp(17px, 1.9vw, 22px);
+  line-height: 1.35;
+  font-weight: 500;
+  letter-spacing: -0.018em;
+  color: #1d1d1f;
+}
+
+.airpods-max-tagline + .airpods-max-tagline {
+  margin-top: 4px;
+}
+
+.airpods-max-price {
+  margin: 14px 0 0;
+  font-size: clamp(16px, 1.5vw, 19px);
+  font-weight: 500;
+  color: #6e6e73;
+  letter-spacing: -0.01em;
+}
+
+.airpods-max-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px 14px;
+  flex: 0 1 auto;
+}
+
+.airpods-max-cta .btn {
+  margin: 0;
+}
+
+@media (max-width: 734px) {
+  .airpods-max-bar {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 12px max(18px, env(safe-area-inset-right)) 20px max(18px, env(safe-area-inset-left));
+  }
+
+  .airpods-max-copy {
+    flex: 0 0 auto;
+    min-width: 0;
+  }
+
+  .airpods-max-cta {
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .airpods-max-price {
+    margin-top: 8px;
+  }
+}
+
 .promo-grid {
   margin-top: 16px;
   padding: 0 max(12px, env(safe-area-inset-right)) 0 max(12px, env(safe-area-inset-left));
@@ -1202,6 +1362,23 @@ main {
     transform-origin: 50% 62%;
   }
 
+  .hero-airpods-max {
+    margin-top: 56px;
+  }
+
+  .airpods-max-stage {
+    min-height: min(86vh, 860px);
+  }
+
+  .airpods-max-center {
+    min-height: min(54vh, 580px);
+    padding-top: 40px;
+  }
+
+  .airpods-max-visual {
+    height: min(46vh, 460px);
+  }
+
   .promo-card-stage {
     min-height: min(88vw, 540px);
     border-radius: 16px;
@@ -1698,6 +1875,33 @@ main {
   .hero-ipad-air .hero-copy p:not(.hero-subhead) {
     font-size: clamp(18px, 3.8vw, 26px);
   }
+
+  .hero-airpods-max {
+    margin-top: 36px;
+  }
+
+  .airpods-max-stage {
+    min-height: min(70vh, 600px);
+  }
+
+  .airpods-max-bg-title {
+    font-size: clamp(32px, 12vw, 72px);
+    white-space: normal;
+    text-align: center;
+    max-width: 96vw;
+    transform: translate(-50%, -42%);
+  }
+
+  .airpods-max-center {
+    min-height: min(42vh, 400px);
+    padding-top: 24px;
+    padding-bottom: 4px;
+  }
+
+  .airpods-max-visual {
+    width: min(94vw, 640px);
+    height: min(40vh, 380px);
+  }
 }
 
 @media (max-width: 560px) {
@@ -1766,6 +1970,19 @@ main {
   .hero-ipad-air .hero-copy p:not(.hero-subhead) {
     font-size: clamp(16px, 4.4vw, 21px);
     margin-top: 6px;
+  }
+
+  .airpods-max-bar {
+    gap: 8px;
+    padding: 10px max(16px, env(safe-area-inset-right)) 16px max(16px, env(safe-area-inset-left));
+  }
+
+  .airpods-max-stage {
+    min-height: min(64vh, 540px);
+  }
+
+  .airpods-max-cta {
+    gap: 8px 10px;
   }
 
   .promo-grid {
